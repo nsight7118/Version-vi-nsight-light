@@ -11,11 +11,11 @@ import UIKit
 
 struct Comment
 {
-    var id: Int8?
-    var content: String?
+    var _id: Int8?
+    var _content: String?
     
     init(id:Int8?, content:String?){
-        let id = id
-        let content = content
+        _id = id
+        _content = content
     }
 }
