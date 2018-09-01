@@ -11,8 +11,6 @@ import Foundation
 class DiscussionViewModelCommentsItem:DiscussionViewModelItem
 {
     
-    
-    
     var type: DiscussionViewModelItemType {
         return .comments
     }

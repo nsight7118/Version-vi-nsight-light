@@ -15,13 +15,15 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
     
     var com = [Comment]()
     
-    
-    var sectionRows:[Int:Int] = [DiscussionViewModelItemType.title.rawValue:1,DiscussionViewModelItemType.profile_email.rawValue:2,
-        DiscussionViewModelItemType.about.rawValue:1,
-        DiscussionViewModelItemType.comments.rawValue:2,
-        DiscussionViewModelItemType.discussionAttributes.rawValue:2]
+    var sectionRows:[Int:Int]
     
     override init() {
+        
+        sectionRows = [DiscussionViewModelItemType.title.rawValue:1,DiscussionViewModelItemType.profile_email.rawValue:2,
+        DiscussionViewModelItemType.about.rawValue:1,
+        DiscussionViewModelItemType.comments.rawValue:2,
+        DiscussionViewModelItemType.discussionAttributes.rawValue:2];
+        
         com.append(Comment(id:0,content:"Hi"))
         com.append(Comment(id:1,content:"Hey"))
         
@@ -39,10 +41,19 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section]
+        
         switch item.type {
+        
         case .profile_email:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
-                cell.email = item.sectionTitile
+                    if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
+                    if let Comments = item as? DiscussionViewModelEmailItem
+                    {
+                        cell.email = Comments.email
+                    }
+                    else
+                    {
+                        cell.email = "notyet"
+                    }
                 return cell
             }
         case .title:
@@ -57,7 +68,14 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
             }
         case .comments:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
-                cell.email = item.sectionTitile
+                if let Comments = item as? DiscussionViewModelCommentsItem
+                {
+                    cell.email = Comments.comments[indexPath.row].content
+                }
+                else
+                {
+                    cell.email = "notyet"
+                }
                 return cell
             }
         case .discussionAttributes:
@@ -68,7 +86,8 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         }
         
         return UITableViewCell()
-    }
+        
+        }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return items[section].sectionTitile
