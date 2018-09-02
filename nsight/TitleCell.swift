@@ -9,14 +9,22 @@
 import Foundation
 import UIKit
 
-class EmailCell : UITableViewCell, ProtocolElelmentCell {
+class TitleCell : UITableViewCell, ProtocolElelmentCell {
     
-    var email : String?
+    var title : String?
     
-    var emailView : UITextView = {
+    var titleImage : UIImage?
+    
+    var titleView : UITextView = {
         var textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
+    }()
+    
+    var titleImageView : UIImageView = {
+        var imageView = UIImageView(frame: CGRect(x: 30, y: 40, width: 200, height: 300))
+        imageView.contentMode = .scaleAspectFill
+        return imageView
     }()
     
     func configure(withModel: DiscussionViewModelItem) {
@@ -35,19 +43,22 @@ class EmailCell : UITableViewCell, ProtocolElelmentCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         //var item = DiscussionViewModelEmailItem(email: email)
         //configure(withModel: item)
-        self.addSubview(emailView)
+        self.addSubview(titleView)
+        self.addSubview(titleImageView)
         
-        
-        emailView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        emailView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        emailView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        emailView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+    titleImageView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        titleImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        titleImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        titleImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if let email = email {
-            emailView.text = email
+        if let email = title {
+            titleView.text = email
+        }
+        if let image = titleImage {
+            titleImageView.image = image
         }
     }
     
