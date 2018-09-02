@@ -57,10 +57,10 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                 return cell
             }
         case .title:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitlelCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitleCell {
                 let title = item as! DiscussionVIewModelTitleItem
                 cell.title = item.sectionTitile
-                cell.uiImage = title.TitlePicture
+                cell.titleImage = title.TitlePicture
                 return cell
             }
         case .about:
