@@ -37,7 +37,7 @@ class EmailCell : UITableViewCell, ProtocolElelmentCell {
         //configure(withModel: item)
         self.addSubview(emailView)
         
-        
+            emailView.backgroundColor = UIColor.green.withAlphaComponent(0.05)
         emailView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         emailView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         emailView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
