@@ -24,7 +24,7 @@ class nsightTableViewController: UITableViewController {
         //tableView.dataSource = self;
         
         self.tableView?.register(EmailCell.self, forCellReuseIdentifier: "email")
-        self.tableView?.register(EmailCell.self, forCellReuseIdentifier: "title")
+        self.tableView?.register(TitlelCell.self, forCellReuseIdentifier: "title")
         
         tableView?.dataSource = viewModel
         

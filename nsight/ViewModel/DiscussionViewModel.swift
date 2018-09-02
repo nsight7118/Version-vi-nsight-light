@@ -57,8 +57,10 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                 return cell
             }
         case .title:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
-                cell.email = item.sectionTitile
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitlelCell {
+                let title = item as! DiscussionVIewModelTitleItem
+                cell.title = item.sectionTitile
+                cell.uiImage = title.TitlePicture
                 return cell
             }
         case .about:
