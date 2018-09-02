@@ -28,7 +28,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         com.append(Comment(id:1,content:"Hey"))
         
         let item1 = DiscussionViewModelEmailItem(email:"Eureka");
-        let item2 = DiscussionVIewModelTitleItem()
+        let item2 = DiscussionVIewModelTitleItem(image:#imageLiteral(resourceName: "Image"))
         let item3 = DiscussionViewModelCommentsItem(comments: com)
         
         items.append(item2);
