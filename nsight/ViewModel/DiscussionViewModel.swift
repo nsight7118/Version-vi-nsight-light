@@ -61,6 +61,18 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.black.withAlphaComponent(0.4)
     }
     */
+    
+    func colorForIndex(index: Int) -> UIColor {
+        //let itemCount = tableData.count - 1
+        
+        return UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
+                   forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = colorForIndex(index: indexPath.row)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section]
         
@@ -76,14 +88,15 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                     {
                         cell.email = "notyet"
                     }
+                    cell.contentView.backgroundColor = UIColor.blue
                 return cell
             }
         case .title:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitleCell {
                 let title = item as! DiscussionVIewModelTitleItem
-                cell.title = item.sectionTitile
+                cell.title = title.sectionTitile
                 cell.titleImage = title.TitlePicture
-                cell.backgroundColor = UIColor.green.withAlphaComponent(0.01)
+                
                 return cell
             }
         case .about:
@@ -96,16 +109,19 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                 if let Comments = item as? DiscussionViewModelCommentsItem
                 {
                     cell.email = Comments.comments[indexPath.row]._content
+                    //cell.contentView.backgroundColor = UIColor.lightGray
                 }
                 else
                 {
                     cell.email = "notyet"
                 }
+                cell.contentView.backgroundColor = UIColor.blue
                 return cell
             }
         case .discussionAttributes:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
                 cell.email = item.sectionTitile
+                cell.contentView.backgroundColor = UIColor.blue
                 return cell
             }
         }

@@ -14,10 +14,15 @@ class nsightTableViewController: UITableViewController {
     var viewModel = DiscussionViewModel()
    
     override func viewDidLoad() {
-      
+        self.tableView.delegate = self
         super.viewDidLoad()
         
+        //self.tableView.backgroundColor = UIColor.lightGray
         //tableView.dataSource = self;
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+
         
         self.tableView?.register(EmailCell.self, forCellReuseIdentifier: "email")
         self.tableView?.register(TitleCell.self, forCellReuseIdentifier: "title")
@@ -25,6 +30,7 @@ class nsightTableViewController: UITableViewController {
         tableView?.dataSource = viewModel
         
     }
+    
     
     
     

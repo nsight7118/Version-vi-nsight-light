@@ -22,9 +22,10 @@ class TitleCell : UITableViewCell, ProtocolElelmentCell {
     }()
     
     var titleImageView : UIImageView = {
-        var imageView = UIImageView(frame: CGRect(x: 60, y: 40, width: 180, height: 170))
+        var imageView = UIImageView(frame: CGRect(x: 60, y: 0, width: 280, height: 300))
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = UIColor.green.withAlphaComponent(0.01)
+        
+        //imageView.backgroundColor = UIColor.green.withAlphaComponent(0.07)
         return imageView
     }()
     
@@ -44,14 +45,24 @@ class TitleCell : UITableViewCell, ProtocolElelmentCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         //var item = DiscussionViewModelEmailItem(email: email)
         //configure(withModel: item)
-        self.addSubview(titleView)
+        
         self.addSubview(titleImageView)
+        self.addSubview(titleView)
+        titleView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        titleView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        titleView.topAnchor.constraint(equalTo: self.titleImageView.bottomAnchor).isActive = true
+        
+        
+        titleView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         
     titleImageView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        titleImageView.bottomAnchor.constraint(equalTo: self.titleView.topAnchor).isActive = true
         titleImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-       titleImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        
         titleImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        titleImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        //titleImageView.center = self.convert(self.center, from:self.superview)        //titleImageView.center.equalTo(self.center)
+    
     }
     
     override func layoutSubviews() {
