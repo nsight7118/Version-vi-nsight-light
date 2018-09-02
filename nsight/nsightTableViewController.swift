@@ -12,19 +12,15 @@ import UIKit
 class nsightTableViewController: UITableViewController {
     
     var viewModel = DiscussionViewModel()
-    
-    
-    
+   
     override func viewDidLoad() {
-        
-        
-        
+      
         super.viewDidLoad()
         
         //tableView.dataSource = self;
         
         self.tableView?.register(EmailCell.self, forCellReuseIdentifier: "email")
-        self.tableView?.register(TitlelCell.self, forCellReuseIdentifier: "title")
+        self.tableView?.register(TitleCell.self, forCellReuseIdentifier: "title")
         
         tableView?.dataSource = viewModel
         

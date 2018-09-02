@@ -38,7 +38,29 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         items.append(item1);
         
     }
-    
+/*
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView {
+        let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 25))
+        returnedView.backgroundColor = UIColor.green
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 25))
+        //label.text = items[section].sectionTitile
+        
+        returnedView.addSubview(label)
+        
+        label.leftAnchor.constraint(equalTo: returnedView.leftAnchor).isActive = true
+        label.rightAnchor.constraint(equalTo: returnedView.rightAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: returnedView.centerYAnchor).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        
+        return returnedView
+        
+    }
+ */
+ /*
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+    }
+    */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section]
         
@@ -61,6 +83,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                 let title = item as! DiscussionVIewModelTitleItem
                 cell.title = item.sectionTitile
                 cell.titleImage = title.TitlePicture
+                cell.backgroundColor = UIColor.green.withAlphaComponent(0.01)
                 return cell
             }
         case .about:
@@ -92,6 +115,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        tableView.backgroundColor = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
         return items[section].sectionTitile
     }
     

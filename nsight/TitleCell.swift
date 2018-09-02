@@ -22,8 +22,9 @@ class TitleCell : UITableViewCell, ProtocolElelmentCell {
     }()
     
     var titleImageView : UIImageView = {
-        var imageView = UIImageView(frame: CGRect(x: 30, y: 40, width: 200, height: 300))
+        var imageView = UIImageView(frame: CGRect(x: 60, y: 40, width: 180, height: 170))
         imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = UIColor.green.withAlphaComponent(0.01)
         return imageView
     }()
     
@@ -48,8 +49,9 @@ class TitleCell : UITableViewCell, ProtocolElelmentCell {
         
     titleImageView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         titleImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        titleImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+       titleImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         titleImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        titleImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     override func layoutSubviews() {
