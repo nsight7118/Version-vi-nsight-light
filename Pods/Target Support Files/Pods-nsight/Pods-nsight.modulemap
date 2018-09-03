@@ -1,0 +1,6 @@
+framework module Pods_nsight {
+  umbrella header "Pods-nsight-umbrella.h"
+
+  export *
+  module * { export * }
+}
