@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CD092D8A6857123C18429F8 /* Pods_nsight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F185DF6A85C8B54B4E9B30F /* Pods_nsight.framework */; };
 		F546EF07212B9C4100441D80 /* nsightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546EF06212B9C4100441D80 /* nsightTableViewController.swift */; };
 		F5522C682129B8B900A00D09 /* ViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C622129B8B800A00D09 /* ViewController 2.swift */; };
 		F5522C692129B8B900A00D09 /* nsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C632129B8B800A00D09 /* nsightViewController.swift */; };
@@ -38,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F185DF6A85C8B54B4E9B30F /* Pods_nsight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nsight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E93E26D02223E136B084AA7 /* Pods-nsight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nsight.release.xcconfig"; path = "Pods/Target Support Files/Pods-nsight/Pods-nsight.release.xcconfig"; sourceTree = "<group>"; };
+		F4DB8524CF663C47909025C7 /* Pods-nsight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nsight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nsight/Pods-nsight.debug.xcconfig"; sourceTree = "<group>"; };
 		F546EF06212B9C4100441D80 /* nsightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nsightTableViewController.swift; sourceTree = "<group>"; };
 		F5522C622129B8B800A00D09 /* ViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
 		F5522C632129B8B800A00D09 /* nsightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nsightViewController.swift; sourceTree = "<group>"; };
@@ -75,12 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD092D8A6857123C18429F8 /* Pods_nsight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72F54B5024086066667034CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F185DF6A85C8B54B4E9B30F /* Pods_nsight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88B9A331F9F70AD57EECDCD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4DB8524CF663C47909025C7 /* Pods-nsight.debug.xcconfig */,
+				9E93E26D02223E136B084AA7 /* Pods-nsight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F57ACE862135BDF500933C47 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,8 @@
 			children = (
 				F5B7FFB42120DB370063D070 /* nsight */,
 				F5B7FFB32120DB370063D070 /* Products */,
+				88B9A331F9F70AD57EECDCD6 /* Pods */,
+				72F54B5024086066667034CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B7FFC72120DB390063D070 /* Build configuration list for PBXNativeTarget "nsight" */;
 			buildPhases = (
+				5306D39FA4FCC7162D2F6DF3 /* [CP] Check Pods Manifest.lock */,
 				F5B7FFAE2120DB370063D070 /* Sources */,
 				F5B7FFAF2120DB370063D070 /* Frameworks */,
 				F5B7FFB02120DB370063D070 /* Resources */,
+				D8B61B5B225DA74CD3B121E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +240,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5306D39FA4FCC7162D2F6DF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nsight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8B61B5B225DA74CD3B121E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-nsight/Pods-nsight-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nsight/Pods-nsight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5B7FFAE2120DB370063D070 /* Sources */ = {
@@ -386,6 +451,7 @@
 		};
 		F5B7FFC82120DB390063D070 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4DB8524CF663C47909025C7 /* Pods-nsight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -406,6 +472,7 @@
 		};
 		F5B7FFC92120DB390063D070 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E93E26D02223E136B084AA7 /* Pods-nsight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
