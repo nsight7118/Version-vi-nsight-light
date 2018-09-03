@@ -21,7 +21,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         
         sectionRows = [DiscussionViewModelItemType.title.rawValue:1,DiscussionViewModelItemType.profile_email.rawValue:1,
         DiscussionViewModelItemType.about.rawValue:1,
-        DiscussionViewModelItemType.comments.rawValue:2,
+        DiscussionViewModelItemType.comments.rawValue:1,
         DiscussionViewModelItemType.discussionAttributes.rawValue:1];
         
         com.append(Comment(id:0,content:"Hi"))
@@ -94,7 +94,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         case .title:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitleCell {
                 let title = item as! DiscussionVIewModelTitleItem
-                cell.title = title.sectionTitile
+                //cell. = title.sectionTitile
                 cell.titleImage = title.TitlePicture
                 
                 return cell
@@ -105,19 +105,14 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                 return cell
             }
         case .comments:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
-                if let Comments = item as? DiscussionViewModelCommentsItem
-                {
-                    cell.email = Comments.comments[indexPath.row]._content
-                    //cell.contentView.backgroundColor = UIColor.lightGray
-                }
-                else
-                {
-                    cell.email = "notyet"
-                }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath) as UITableViewCell
+                
+                cell.accessoryType = .detailDisclosureButton
+            
+                
                 cell.contentView.backgroundColor = UIColor.blue
                 return cell
-            }
+            
         case .discussionAttributes:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
                 cell.email = item.sectionTitile
@@ -129,6 +124,10 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         return UITableViewCell()
         
         }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        
+    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         tableView.backgroundColor = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)

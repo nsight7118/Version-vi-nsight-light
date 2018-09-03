@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9CD092D8A6857123C18429F8 /* Pods_nsight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F185DF6A85C8B54B4E9B30F /* Pods_nsight.framework */; };
+		F500EF9A213DD377002DE3AC /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF99213DD377002DE3AC /* CommentCell.swift */; };
+		F500EF9C213DDD4B002DE3AC /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9B213DDD4B002DE3AC /* ConversationViewController.swift */; };
+		F500EF9F213DDE58002DE3AC /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9D213DDE58002DE3AC /* MockMessage.swift */; };
+		F500EFA0213DDE58002DE3AC /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9E213DDE58002DE3AC /* SampleData.swift */; };
 		F546EF07212B9C4100441D80 /* nsightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546EF06212B9C4100441D80 /* nsightTableViewController.swift */; };
 		F5522C682129B8B900A00D09 /* ViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C622129B8B800A00D09 /* ViewController 2.swift */; };
 		F5522C692129B8B900A00D09 /* nsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C632129B8B800A00D09 /* nsightViewController.swift */; };
@@ -42,6 +46,10 @@
 		5F185DF6A85C8B54B4E9B30F /* Pods_nsight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nsight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E93E26D02223E136B084AA7 /* Pods-nsight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nsight.release.xcconfig"; path = "Pods/Target Support Files/Pods-nsight/Pods-nsight.release.xcconfig"; sourceTree = "<group>"; };
 		F4DB8524CF663C47909025C7 /* Pods-nsight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nsight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nsight/Pods-nsight.debug.xcconfig"; sourceTree = "<group>"; };
+		F500EF99213DD377002DE3AC /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		F500EF9B213DDD4B002DE3AC /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		F500EF9D213DDE58002DE3AC /* MockMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
+		F500EF9E213DDE58002DE3AC /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		F546EF06212B9C4100441D80 /* nsightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nsightTableViewController.swift; sourceTree = "<group>"; };
 		F5522C622129B8B800A00D09 /* ViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
 		F5522C632129B8B800A00D09 /* nsightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nsightViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +148,10 @@
 		F5B7FFB42120DB370063D070 /* nsight */ = {
 			isa = PBXGroup;
 			children = (
+				F500EF9D213DDE58002DE3AC /* MockMessage.swift */,
+				F500EF9E213DDE58002DE3AC /* SampleData.swift */,
+				F500EF9B213DDD4B002DE3AC /* ConversationViewController.swift */,
+				F500EF99213DD377002DE3AC /* CommentCell.swift */,
 				F55AA7DB213AF331008A79E0 /* TitleCell.swift */,
 				F57ACE9B2136BC1B00933C47 /* ProtocolElementCell.swift */,
 				F57ACE842135BCB500933C47 /* EmailCell.swift */,
@@ -285,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F500EFA0213DDE58002DE3AC /* SampleData.swift in Sources */,
 				F5522C6D2129B8B900A00D09 /* nsightTabController.swift in Sources */,
 				F5522C692129B8B900A00D09 /* nsightViewController.swift in Sources */,
 				F57ACE852135BCB500933C47 /* EmailCell.swift in Sources */,
@@ -292,18 +305,21 @@
 				F5522C6B2129B8B900A00D09 /* PostViewController.swift in Sources */,
 				F5B7FFB82120DB370063D070 /* ViewController.swift in Sources */,
 				F5522C6C2129B8B900A00D09 /* DBScaffolding.swift in Sources */,
+				F500EF9F213DDE58002DE3AC /* MockMessage.swift in Sources */,
 				F55AA7DC213AF331008A79E0 /* TitleCell.swift in Sources */,
 				F5CA74AB212BA3BB00451FFC /* Attribute.swift in Sources */,
 				F57ACE9A2135BEB800933C47 /* DiscussionVIewModelTitleItem.swift in Sources */,
 				F57ACE952135BEB800933C47 /* DiscussionViewModelItemType.swift in Sources */,
 				F57ACE832135ABFE00933C47 /* DiscussionViewModel.swift in Sources */,
 				F57ACE962135BEB800933C47 /* DiscussionViewModelEmailItem.swift in Sources */,
+				F500EF9A213DD377002DE3AC /* CommentCell.swift in Sources */,
 				F57ACE9C2136BC1B00933C47 /* ProtocolElementCell.swift in Sources */,
 				F57ACE972135BEB800933C47 /* DiscussionViewModelCommentsItem.swift in Sources */,
 				F57ACE992135BEB800933C47 /* DiscussionViewModelItem.swift in Sources */,
 				F5522C682129B8B900A00D09 /* ViewController 2.swift in Sources */,
 				F5CA74AF212BA45700451FFC /* Comment.swift in Sources */,
 				F5B7FFB62120DB370063D070 /* AppDelegate.swift in Sources */,
+				F500EF9C213DDD4B002DE3AC /* ConversationViewController.swift in Sources */,
 				F546EF07212B9C4100441D80 /* nsightTableViewController.swift in Sources */,
 				F57ACE982135BEB800933C47 /* DiscussionViewModelAttributesItem.swift in Sources */,
 				F5522C6A2129B8B900A00D09 /* PostManager.swift in Sources */,
