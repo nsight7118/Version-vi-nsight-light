@@ -66,7 +66,7 @@ final internal class SampleData {
         return steven
     }
 
-    let messageImages: [UIImage] = [#imageLiteral(resourceName: "Dan-Leonard"), #imageLiteral(resourceName: "Tim-Cook"), #imageLiteral(resourceName: "Steve-Jobs")]
+    let messageImages: [UIImage] = [#imageLiteral(resourceName: "Image")]
 
     var now = Date()
 
@@ -145,7 +145,7 @@ final internal class SampleData {
 
         let randomNumberSender = Int(arc4random_uniform(UInt32(senders.count)))
         let randomNumberText = Int(arc4random_uniform(UInt32(messageTextValues.count)))
-        let randomNumberImage = Int(arc4random_uniform(UInt32(messageImages.count)))
+        let randomNumberImage =  Int(arc4random_uniform(UInt32(messageImages.count)))
         let randomMessageType = Int(arc4random_uniform(UInt32(messageTypes.count)))
         let randomNumberLocation = Int(arc4random_uniform(UInt32(locations.count)))
         let randomNumberEmoji = Int(arc4random_uniform(UInt32(emojis.count)))
@@ -185,13 +185,13 @@ final internal class SampleData {
     func getAvatarFor(sender: Sender) -> Avatar {
         switch sender {
         case dan:
-            return Avatar(image: #imageLiteral(resourceName: "Dan-Leonard"), initials: "DL")
+            return Avatar(image: nil, initials: "DL")
         case steven:
             return Avatar(initials: "S")
         case jobs:
-            return Avatar(image: #imageLiteral(resourceName: "Steve-Jobs"), initials: "SJ")
+            return Avatar(image: nil, initials: "SJ")
         case cook:
-            return Avatar(image: #imageLiteral(resourceName: "Tim-Cook"))
+            return Avatar(image: nil)
         default:
             return Avatar()
         }

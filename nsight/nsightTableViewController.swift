@@ -32,6 +32,12 @@ class nsightTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
+        
+    {
+        performSegue(withIdentifier: "ConversationView" , sender: 2)
+    }
+    
     
     
     

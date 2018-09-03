@@ -43,7 +43,7 @@ internal class ConversationViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        let messagesToFetch = UserDefaults.standard.mockMessagesCount()
+        let messagesToFetch = 5
         
         DispatchQueue.global(qos: .userInitiated).async {
             SampleData.shared.getMessages(count: messagesToFetch) { messages in
@@ -331,9 +331,9 @@ extension ConversationViewController: MessagesDisplayDelegate {
 
     func annotationViewForLocation(message: MessageType, at indexPath: IndexPath, in messageCollectionView: MessagesCollectionView) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: nil, reuseIdentifier: nil)
-        let pinImage = #imageLiteral(resourceName: "pin")
-        annotationView.image = pinImage
-        annotationView.centerOffset = CGPoint(x: 0, y: -pinImage.size.height / 2)
+        //let pinImage = #imageLiteral(resourceName: "pin")
+        //annotationView.image = pinImage
+        //annotationView.centerOffset = CGPoint(x: 0, y: -pinImage.size.height / 2)
         return annotationView
     }
 

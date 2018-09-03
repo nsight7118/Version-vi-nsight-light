@@ -127,10 +127,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="amV-7u-MN2"/>
+                    <connections>
+                        <segue destination="ZZk-kf-nwV" kind="show" identifier="ConversationView" id="eYv-zt-PMD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qir-Kd-iq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3240.8000000000002" y="812.74362818590714"/>
+            <point key="canvasLocation" x="3369" y="813"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GED-ty-Ec3">
