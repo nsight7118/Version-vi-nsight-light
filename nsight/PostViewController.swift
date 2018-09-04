@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class PostViewController : ViewController
+class PostViewController : UIViewController
 {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBOutlet weak var postOutlet: UITextView!

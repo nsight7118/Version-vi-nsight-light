@@ -9,13 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBAction func SignInAction(_ sender: Any) {
+        performSegue(withIdentifier: "SignIn", sender: sender)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let dnahue = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
         
         self.view.backgroundColor = dnahue
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }

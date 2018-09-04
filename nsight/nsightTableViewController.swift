@@ -17,7 +17,10 @@ class nsightTableViewController: UITableViewController {
         self.tableView.delegate = self
         super.viewDidLoad()
         
-        //self.tableView.backgroundColor = UIColor.lightGray
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(logout))
+    
+    
+           //self.tableView.backgroundColor = UIColor.lightGray
         //tableView.dataSource = self;
         
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -31,6 +34,12 @@ class nsightTableViewController: UITableViewController {
         tableView?.dataSource = viewModel
         
     }
+    
+    @objc func logout()
+    {
+        dismiss(animated: true, completion: nil)
+        
+    } 
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
         

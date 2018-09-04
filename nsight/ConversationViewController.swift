@@ -27,7 +27,8 @@ import MessageKit
 import MapKit
 
 internal class ConversationViewController: MessagesViewController {
-
+    
+    
     let refreshControl = UIRefreshControl()
     
     var messageList: [MockMessage] = []
@@ -43,6 +44,7 @@ internal class ConversationViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(Back))
         let messagesToFetch = 5
         
         DispatchQueue.global(qos: .userInitiated).async {
@@ -54,7 +56,7 @@ internal class ConversationViewController: MessagesViewController {
                 }
             }
         }
-
+        
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
@@ -78,6 +80,12 @@ internal class ConversationViewController: MessagesViewController {
                             target: self,
                             action: #selector(ConversationViewController.handleTyping))
         ]
+    }
+    
+    @objc func Back()
+    {
+        dismiss(animated: true, completion: nil)
+        
     }
     
     @objc func handleTyping() {
