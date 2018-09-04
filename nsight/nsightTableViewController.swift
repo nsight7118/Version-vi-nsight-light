@@ -35,7 +35,15 @@ class nsightTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
         
     {
-        performSegue(withIdentifier: "ConversationView" , sender: 2)
+        
+        self.navigationController?.navigationBar.isHidden = true
+        
+        performSegue(withIdentifier: "ConversationView" , sender: nil)
+        
+        //let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        //let vc = sb.instantiateViewController(withIdentifier:"Conversation") as! ConversationViewController
+        //self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

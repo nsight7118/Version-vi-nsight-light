@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="2896.8000000000002" y="90.404797601199405"/>
         </scene>
-        <!--Conversation View Controller-->
+        <!--Conversation-->
         <scene sceneID="zYK-C0-lvz">
             <objects>
                 <viewController storyboardIdentifier="ConversationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZZk-kf-nwV" customClass="ConversationViewController" customModule="nsight" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,7 +107,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vH9-II-i8G"/>
                     </view>
-                    <navigationItem key="navigationItem" id="q5x-R3-3Gg"/>
+                    <navigationItem key="navigationItem" title="Conversation" leftItemsSupplementBackButton="YES" id="q5x-R3-3Gg">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ohu-ro-JAz"/>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="Ohu-ro-JAz" id="uel-Kq-YcS"/>
+                        </connections>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qz9-Dm-Bhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
