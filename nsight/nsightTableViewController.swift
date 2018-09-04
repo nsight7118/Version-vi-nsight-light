@@ -39,13 +39,13 @@ class nsightTableViewController: UITableViewController {
     {
         dismiss(animated: true, completion: nil)
         
-    } 
+    }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
         
     {
         
-        self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
         
         performSegue(withIdentifier: "ConversationView" , sender: nil)
         

@@ -134,7 +134,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="amV-7u-MN2"/>
                     <connections>
-                        <segue destination="5cf-ng-ZmN" kind="showDetail" identifier="ConversationView" id="eYv-zt-PMD"/>
+                        <segue destination="5cf-ng-ZmN" kind="show" identifier="ConversationView" id="eYv-zt-PMD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qir-Kd-iq1" userLabel="First Responder" sceneMemberID="firstResponder"/>

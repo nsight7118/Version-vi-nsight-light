@@ -109,6 +109,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                 
                 cell.accessoryType = .detailDisclosureButton
             
+                cell.textLabel?.text = "Discussion Forum"
                 
                 cell.contentView.backgroundColor = UIColor.blue
                 return cell
