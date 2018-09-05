@@ -9,8 +9,16 @@
 import Foundation
 import UIKit
 
-class NsightViewController : UIViewController
+class NsightViewController : UIViewController,  UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate
 {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
