@@ -16,7 +16,7 @@ class NsightViewController : UIViewController
         
     let dnahue = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
 
-    self.view.backgroundColor = dnahue
+    self.view.backgroundColor = UIColor(red:0.61, green: 0.80, blue: 0.40, alpha:1.0)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(logout))
      }

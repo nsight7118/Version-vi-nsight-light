@@ -12,6 +12,7 @@
 		F500EF9C213DDD4B002DE3AC /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9B213DDD4B002DE3AC /* ConversationViewController.swift */; };
 		F500EF9F213DDE58002DE3AC /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9D213DDE58002DE3AC /* MockMessage.swift */; };
 		F500EFA0213DDE58002DE3AC /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9E213DDE58002DE3AC /* SampleData.swift */; };
+		F500EFA2213F6CEB002DE3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F500EFA1213F6CEB002DE3AC /* Assets.xcassets */; };
 		F546EF07212B9C4100441D80 /* nsightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546EF06212B9C4100441D80 /* nsightTableViewController.swift */; };
 		F5522C682129B8B900A00D09 /* ViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C622129B8B800A00D09 /* ViewController 2.swift */; };
 		F5522C692129B8B900A00D09 /* nsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C632129B8B800A00D09 /* nsightViewController.swift */; };
@@ -35,7 +36,6 @@
 		F5B7FFB82120DB370063D070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7FFB72120DB370063D070 /* ViewController.swift */; };
 		F5B7FFBB2120DB370063D070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B7FFB92120DB370063D070 /* Main.storyboard */; };
 		F5B7FFBE2120DB370063D070 /* nsight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5B7FFBC2120DB370063D070 /* nsight.xcdatamodeld */; };
-		F5B7FFC02120DB390063D070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B7FFBF2120DB390063D070 /* Assets.xcassets */; };
 		F5B7FFC32120DB390063D070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B7FFC12120DB390063D070 /* LaunchScreen.storyboard */; };
 		F5CA74A9212BA2D500451FFC /* Discussion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA74A8212BA2D500451FFC /* Discussion.swift */; };
 		F5CA74AB212BA3BB00451FFC /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA74AA212BA3BB00451FFC /* Attribute.swift */; };
@@ -50,6 +50,7 @@
 		F500EF9B213DDD4B002DE3AC /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		F500EF9D213DDE58002DE3AC /* MockMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		F500EF9E213DDE58002DE3AC /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		F500EFA1213F6CEB002DE3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F546EF06212B9C4100441D80 /* nsightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nsightTableViewController.swift; sourceTree = "<group>"; };
 		F5522C622129B8B800A00D09 /* ViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
 		F5522C632129B8B800A00D09 /* nsightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nsightViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		F5B7FFB72120DB370063D070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5B7FFBA2120DB370063D070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5B7FFBD2120DB370063D070 /* nsight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nsight.xcdatamodel; sourceTree = "<group>"; };
-		F5B7FFBF2120DB390063D070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5B7FFC22120DB390063D070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5B7FFC42120DB390063D070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CA74A8212BA2D500451FFC /* Discussion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discussion.swift; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 		F5B7FFB42120DB370063D070 /* nsight */ = {
 			isa = PBXGroup;
 			children = (
+				F500EFA1213F6CEB002DE3AC /* Assets.xcassets */,
 				F500EF9D213DDE58002DE3AC /* MockMessage.swift */,
 				F500EF9E213DDE58002DE3AC /* SampleData.swift */,
 				F500EF9B213DDD4B002DE3AC /* ConversationViewController.swift */,
@@ -165,7 +166,6 @@
 				F5B7FFB52120DB370063D070 /* AppDelegate.swift */,
 				F5B7FFB72120DB370063D070 /* ViewController.swift */,
 				F5B7FFB92120DB370063D070 /* Main.storyboard */,
-				F5B7FFBF2120DB390063D070 /* Assets.xcassets */,
 				F5B7FFC12120DB390063D070 /* LaunchScreen.storyboard */,
 				F5B7FFC42120DB390063D070 /* Info.plist */,
 				F5B7FFBC2120DB370063D070 /* nsight.xcdatamodeld */,
@@ -246,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B7FFC32120DB390063D070 /* LaunchScreen.storyboard in Resources */,
-				F5B7FFC02120DB390063D070 /* Assets.xcassets in Resources */,
+				F500EFA2213F6CEB002DE3AC /* Assets.xcassets in Resources */,
 				F5B7FFBB2120DB370063D070 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

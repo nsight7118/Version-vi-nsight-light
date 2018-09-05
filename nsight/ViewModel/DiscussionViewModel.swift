@@ -111,8 +111,8 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
             
                 cell.textLabel?.text = "Discussion Forum"
                 
-                cell.contentView.backgroundColor = UIColor.blue
-                return cell
+            cell.contentView.backgroundColor = UIColor(red:0.61, green: 0.80, blue: 0.40, alpha:1.0)
+            return cell
             
         case .discussionAttributes:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
@@ -131,7 +131,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        tableView.backgroundColor = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
+        //tableView.backgroundColor = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
         return items[section].sectionTitile
     }
     
