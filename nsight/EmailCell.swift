@@ -37,7 +37,7 @@ class EmailCell : UITableViewCell, ProtocolElelmentCell {
         //configure(withModel: item)
         self.addSubview(emailView)
         
-            emailView.backgroundColor = UIColor.green.withAlphaComponent(0.05)
+            emailView.backgroundColor = UIColor(red:0.61, green: 0.80, blue: 0.40, alpha:1.0)
        
         
         emailView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
@@ -50,7 +50,7 @@ class EmailCell : UITableViewCell, ProtocolElelmentCell {
         super.layoutSubviews()
         if let email = email {
             emailView.text = email
-            emailView.backgroundColor = UIView(#imageLiteral(resourceName: "cell-background"))
+            
         }
     }
     
