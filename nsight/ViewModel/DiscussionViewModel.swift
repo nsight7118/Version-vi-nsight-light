@@ -11,31 +11,21 @@ import UIKit
 
 class DiscussionViewModel: NSObject, UITableViewDataSource {
     
-    var items = [DiscussionViewModelItem]()
+    var data = SampleDiscussions()
     
-    var com = [Comment]()
+    var items = [DiscussionViewModelItem]()
     
     var sectionRows:[Int:Int]
     
     override init() {
+        
+        items = data.items
         
         sectionRows = [DiscussionViewModelItemType.title.rawValue:1,DiscussionViewModelItemType.profile_email.rawValue:1,
         DiscussionViewModelItemType.about.rawValue:1,
         DiscussionViewModelItemType.comments.rawValue:1,
         DiscussionViewModelItemType.discussionAttributes.rawValue:1];
         
-        com.append(Comment(id:0,content:"Hi"))
-        com.append(Comment(id:1,content:"Hey"))
-        
-        let item1 = DiscussionViewModelEmailItem(email:"Eureka");
-        let item2 = DiscussionVIewModelTitleItem(image:#imageLiteral(resourceName: "Image"))
-        let item3 = DiscussionViewModelCommentsItem(comments: com)
-        
-        items.append(item2);
-        items.append(item1);
-        items.append(item1);
-        items.append(item3);
-        items.append(item1);
         
     }
 /*
