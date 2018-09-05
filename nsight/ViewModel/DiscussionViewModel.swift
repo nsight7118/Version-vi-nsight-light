@@ -15,6 +15,8 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
     
     var items = [DiscussionViewModelItem]()
     
+    var discussions = [Discussion]()
+    
     var sectionRows:[Int:Int]
     
     override init() {
