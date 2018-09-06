@@ -16,7 +16,7 @@ class nsightTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.tableView.delegate = self
         super.viewDidLoad()
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(logout))
     
     
@@ -55,7 +55,25 @@ class nsightTableViewController: UITableViewController {
         //self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     
-    
+        let vw = UIView()
+     /*
+        let tv = UITextView()
+        
+        tv.text = "Nalin"
+        
+        vw.addSubview(tv)
+        
+        tv.leftAnchor.constraint(equalTo:vw.leftAnchor).isActive = true
+        tv.topAnchor.constraint(equalTo: vw.topAnchor).isActive = true
+        tv.bottomAnchor.constraint(equalTo: vw.bottomAnchor).isActive = true
+        tv.rightAnchor.constraint(equalTo: vw.rightAnchor).isActive = true
+      */
+        vw.backgroundColor = UIColor(red:0.65, green: 0.84, blue: 0.65, alpha:1.0)
+        
+        return vw
+    }
+ 
     
 }

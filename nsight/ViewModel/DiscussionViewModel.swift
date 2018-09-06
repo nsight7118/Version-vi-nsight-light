@@ -122,10 +122,9 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
     
     
     
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //tableView.backgroundColor = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
-        return items[section].sectionTitile
+        let header = items[section].sectionTitile
+        return header
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
