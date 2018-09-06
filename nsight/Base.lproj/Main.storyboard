@@ -88,37 +88,12 @@
                     <view key="view" contentMode="scaleToFill" id="0BX-6q-lTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Lq-6o-uZw" customClass="TableView" customModule="nsight" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <searchBar key="tableFooterView" contentMode="redraw" text="Discussion Search" showsSearchResultsButton="YES" showsBookmarkButton="YES" showsCancelButton="YES" showsScopeBar="YES" id="H9Q-sQ-4it">
-                                    <rect key="frame" x="0.0" y="-44" width="375" height="100"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <scopeButtonTitles>
-                                        <string>Audience</string>
-                                        <string>Clasification</string>
-                                    </scopeButtonTitles>
-                                    <connections>
-                                        <outlet property="delegate" destination="IXp-yB-Fht" id="1eB-2U-Scb"/>
-                                    </connections>
-                                </searchBar>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="0Lq-6o-uZw" firstAttribute="leading" secondItem="0BX-6q-lTH" secondAttribute="leading" id="5Vm-RG-0S5"/>
-                            <constraint firstItem="0Lq-6o-uZw" firstAttribute="bottom" secondItem="xWM-wM-jNM" secondAttribute="bottom" id="AVQ-56-W3U"/>
-                            <constraint firstAttribute="trailing" secondItem="0Lq-6o-uZw" secondAttribute="trailing" id="LXi-8h-qWT"/>
-                            <constraint firstItem="0Lq-6o-uZw" firstAttribute="top" secondItem="xWM-wM-jNM" secondAttribute="top" id="wYL-jr-LWO"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xWM-wM-jNM"/>
                     </view>
                     <navigationItem key="navigationItem" id="oFW-0V-tfp"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="2eG-aj-QKy" id="gmj-Cy-jCP"/>
-                        <outlet property="tableOut" destination="0Lq-6o-uZw" id="8u9-Di-eem"/>
                         <segue destination="TpJ-RH-D2i" kind="show" id="n2N-ST-iQp"/>
                     </connections>
                 </viewController>
@@ -126,14 +101,13 @@
                 <searchDisplayController id="2eG-aj-QKy">
                     <connections>
                         <outlet property="delegate" destination="IXp-yB-Fht" id="8aC-nv-UPh"/>
-                        <outlet property="searchBar" destination="H9Q-sQ-4it" id="cPa-pc-I6a"/>
                         <outlet property="searchContentsController" destination="IXp-yB-Fht" id="3Wb-CX-3Bk"/>
                         <outlet property="searchResultsDataSource" destination="IXp-yB-Fht" id="JWv-qD-el2"/>
                         <outlet property="searchResultsDelegate" destination="IXp-yB-Fht" id="AKO-wd-qgy"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3836" y="90.404797601199405"/>
+            <point key="canvasLocation" x="3900" y="-165"/>
         </scene>
         <!--Conversation-->
         <scene sceneID="zYK-C0-lvz">
@@ -252,7 +226,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBd-tG-XHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2896.8000000000002" y="90.404797601199405"/>
+            <point key="canvasLocation" x="2897" y="-133"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
