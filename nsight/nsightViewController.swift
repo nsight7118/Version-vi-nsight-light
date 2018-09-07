@@ -31,7 +31,7 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+    func filterContentForSearchText(_ searchText: String, scope: String ) {
         filteredDiscussions = discussions.filter({( discussion : Discussion) -> Bool in
             
             let doesCategoryMatch = (scope == "All") || (discussion.clasification == scope)
@@ -39,11 +39,11 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
             if searchBarIsEmpty() {
                 return doesCategoryMatch
             } else {
-                return doesCategoryMatch && discussion.clasification!.lowercased().contains(searchText.lowercased())
+                return doesCategoryMatch && discussion.title!.lowercased().contains(searchText.lowercased())
             }
         })
 
-            
+        
         
         
         self.tableView!.reloadData()
@@ -59,13 +59,13 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         return searchController.isActive && (!searchBarIsEmpty() || searchBarScopeIsFiltering)
 
     }
-    
+    /*
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
         filterContentForSearchText(searchController.searchBar.text!, scope: scope)
     }
-
+     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
@@ -99,7 +99,7 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
     
         // Setup the Search Controller
-        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
+        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Discussions"
         navigationItem.searchController = searchController
@@ -112,12 +112,12 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         
         let data = SampleDiscussions()
         
-        searchController.searchBar.scopeButtonTitles = ["All", "Classification", "Audience", "Title"]
+        searchController.searchBar.scopeButtonTitles = ["All", "Challenges", "Goals"]
         searchController.searchBar.delegate = self
         
         
         discussions = data.discusions
-          
+        
     //let dnahue = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
 
     self.view.backgroundColor = UIColor(red:0.61, green: 0.80, blue: 0.40, alpha:1.0)
@@ -134,13 +134,22 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
 }
 
 extension NsightViewController: UISearchBarDelegate {
-    // MARK: - UISearchBar Delegate
-    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
     }
 }
 
 
+extension NsightViewController: UISearchResultsUpdating {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    }
+    
+    
+    
+}
 
 
 

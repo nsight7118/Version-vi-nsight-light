@@ -27,7 +27,7 @@ class SampleDiscussions
     com.append(Comment(id:1,content:"Hey"))
 
     let item1 = DiscussionViewModelEmailItem(email:"Eureka");
-    let item2 = DiscussionVIewModelTitleItem(image:#imageLiteral(resourceName: "English"))
+    let item2 =  DiscussionVIewModelTitleItem(image:#imageLiteral(resourceName: "English"))
     let item3 = DiscussionViewModelCommentsItem(comments: com)
 
     items.append(item2);
@@ -39,24 +39,24 @@ class SampleDiscussions
     
     func addDiscussions()
     {
-       var Discussion1 = Discussion(
+       let Discussion1 = Discussion(
         _title: "Better decisions, better leaders",
         _content: "The only thing that might be harder than embracing change is making tough decisions. A hallmark of great leadership is creating the conditions to arrive at consensus when major decisions will impact the entire school or district. Giving others a say and allowing for critical conversation is a sign of strength, not weakness.  As change is a process, not an event, discussions, feedback, and reflection can and should take time in order to make the best decision possible. This helps to ensure successful implementation and sustainability. ",
         _email: "jayanthi@enlighten.com",
         _about: "this is it!",
         _audience: "Principals",
-        _classification: "Meeting Educational Challenges"
+        _classification: "Goals"
         )
         
        discusions.append(Discussion1)
         
-        var Discussion2 = Discussion(
+        let Discussion2 = Discussion(
             _title: "Teacher Talk: small rural schools",
             _content: "This week I interviewed Ms. Marl who is an early career teacher working in a rural NSW public school. She has been teaching for 5 years, and all of her career has been in rural small schools. Ms Marl’s current school has approximately 30 students whose learning nurtured by three teachers, one School Learning Support Officer and one School Administrative Manager. Her class has 8 children across years K and 1.",
             _email: "jayanthi@enlighten.com",
             _about: "this is it!",
             _audience: "Teachers",
-            _classification: "Educational Challenges"
+            _classification: "Challenges"
         )
         var Discussion3 = Discussion(
             _title: "Is assessment unfair?",
@@ -64,7 +64,7 @@ class SampleDiscussions
             _email: "jayanthi@enlighten.com",
             _about: "this is it!",
             _audience: "Educators",
-            _classification: "Educational Challenges"
+            _classification: "Challenges"
         )
         var Discussion4 = Discussion(
             _title: "Thinking back to move our English language learners forward",
@@ -72,7 +72,7 @@ class SampleDiscussions
             _email: "jayanthi@enlighten.com",
             _about: "this is it!",
             _audience: "Parents and Teachers",
-            _classification: "Meeting Educational Challenges"
+            _classification: "Challenges"
         )
         var Discussion5 = Discussion(
             _title: "Your Future",
@@ -80,7 +80,7 @@ class SampleDiscussions
             _email: "jayanthi@enlighten.com",
             _about: "this is it!",
             _audience: "Students",
-            _classification: "Educational Goals"
+            _classification: "Goals"
         )
         
         discusions.append(Discussion2)
