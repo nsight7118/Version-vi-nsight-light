@@ -15,8 +15,7 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
-    searchController.searchBar.scopeButtonTitles = ["All", "Classification", "Audience", "Title"]
-    searchController.searchBar.delegate = self
+    
 
     
     var items = [DiscussionViewModelItem]()
@@ -113,6 +112,10 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         
         let data = SampleDiscussions()
         
+        searchController.searchBar.scopeButtonTitles = ["All", "Classification", "Audience", "Title"]
+        searchController.searchBar.delegate = self
+        
+        
         discussions = data.discusions
           
     //let dnahue = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
@@ -138,13 +141,7 @@ extension NsightViewController: UISearchBarDelegate {
 }
 
 
-extension NsightViewController: UISearchResultsUpdating {
-    // MARK: - UISearchResultsUpdating Delegate
-    func updateSearchResults(for searchController: UISearchController) {
 
- filterContentForSearchText(searchController.searchBar.text!)
-        
 
-    }
-}
+
 
