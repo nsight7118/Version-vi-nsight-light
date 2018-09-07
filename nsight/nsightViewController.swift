@@ -34,12 +34,12 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     func filterContentForSearchText(_ searchText: String, scope: String ) {
         filteredDiscussions = discussions.filter({( discussion : Discussion) -> Bool in
             
-            let doesCategoryMatch = (scope == "All") || (discussion.clasification == scope)
+            let doesCategoryMatch = (scope == "All") || (discussion.audience == scope)
             
             if searchBarIsEmpty() {
                 return doesCategoryMatch
             } else {
-                return doesCategoryMatch && discussion.title!.lowercased().contains(searchText.lowercased())
+                return doesCategoryMatch && discussion.audience!.lowercased().contains(searchText.lowercased())
             }
         })
 
@@ -112,7 +112,7 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         
         let data = SampleDiscussions()
         
-        searchController.searchBar.scopeButtonTitles = ["All", "Challenges", "Goals"]
+        searchController.searchBar.scopeButtonTitles = ["All", "Students", "Parents","Teachers","Principals"]
         searchController.searchBar.delegate = self
         
         
