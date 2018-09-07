@@ -22,9 +22,9 @@ class TitleCell : UITableViewCell, ProtocolElelmentCell {
     }()
     
     var titleImageView : UIImageView = {
-        var imageView = UIImageView(frame: CGRect(x: 60, y: 0, width: 280, height: 300))
+        var imageView = UIImageView(frame: CGRect(x: 60, y: 0, width: 280, height: 380))
         imageView.contentMode = .scaleAspectFill
-        
+        imageView.translatesAutoresizingMaskIntoConstraints = true
         //imageView.backgroundColor = UIColor.green.withAlphaComponent(0.07)
         return imageView
     }()
@@ -55,14 +55,19 @@ class TitleCell : UITableViewCell, ProtocolElelmentCell {
         
         titleView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         
-    titleImageView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        titleImageView.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+
         titleImageView.bottomAnchor.constraint(equalTo: self.titleView.topAnchor).isActive = true
         titleImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
         
         titleImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         //titleImageView.center = self.convert(self.center, from:self.superview)        //titleImageView.center.equalTo(self.center)
-    
+        //titleImageView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor).isActive = true
+        //titleImageView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor).isActive = true
+    //titleImageView.firstBaselineAnchor.constraintEqualToSystemSpacingBelow(contentView.layoutMarginsGuide.topAnchor, multiplier: 1).isActive = true
+
+
     }
     
     override func layoutSubviews() {

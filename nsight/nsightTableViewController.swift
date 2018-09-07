@@ -55,6 +55,8 @@ class nsightTableViewController: UITableViewController {
         //self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     
         let vw = UIView()
