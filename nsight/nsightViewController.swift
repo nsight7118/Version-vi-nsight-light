@@ -15,6 +15,10 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
+    searchController.searchBar.scopeButtonTitles = ["All", "Classification", "Audience", "Title"]
+    searchController.searchBar.delegate = self
+
+    
     var items = [DiscussionViewModelItem]()
     
     var discussions = [Discussion]()
@@ -30,8 +34,18 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filteredDiscussions = discussions.filter({( discussion : Discussion) -> Bool in
-            return (discussion.title?.lowercased().contains(searchText.lowercased()))!
+            
+            let doesCategoryMatch = (scope == "All") || (discussion.clasification == scope)
+            
+            if searchBarIsEmpty() {
+                return doesCategoryMatch
+            } else {
+                return doesCategoryMatch && discussion.clasification!.lowercased().contains(searchText.lowercased())
+            }
         })
+
+            
+        
         
         self.tableView!.reloadData()
     }
@@ -42,8 +56,17 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
 
     
     func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
+        let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive && (!searchBarIsEmpty() || searchBarScopeIsFiltering)
+
     }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
@@ -106,6 +129,14 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     }
     
 }
+
+extension NsightViewController: UISearchBarDelegate {
+    // MARK: - UISearchBar Delegate
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    }
+}
+
 
 extension NsightViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
