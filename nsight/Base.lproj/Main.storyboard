@@ -88,12 +88,35 @@
                     <view key="view" contentMode="scaleToFill" id="0BX-6q-lTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="auy-1T-8Rz">
+                                <rect key="frame" x="8" y="74" width="358" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ldi-7V-Bqa">
+                                        <rect key="frame" x="0.0" y="28" width="358" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ldi-7V-Bqa" id="ovc-Mp-djg">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="auy-1T-8Rz" firstAttribute="centerX" secondItem="0BX-6q-lTH" secondAttribute="centerX" id="FsO-Pv-qKc"/>
+                            <constraint firstItem="xWM-wM-jNM" firstAttribute="bottom" secondItem="auy-1T-8Rz" secondAttribute="bottom" constant="14" id="GrC-A4-KBz"/>
+                            <constraint firstItem="auy-1T-8Rz" firstAttribute="top" secondItem="xWM-wM-jNM" secondAttribute="top" constant="10" id="hIr-3w-f5y"/>
+                            <constraint firstItem="auy-1T-8Rz" firstAttribute="leading" secondItem="xWM-wM-jNM" secondAttribute="leading" constant="8" id="mzE-Zq-ruD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xWM-wM-jNM"/>
                     </view>
                     <navigationItem key="navigationItem" id="oFW-0V-tfp"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="2eG-aj-QKy" id="gmj-Cy-jCP"/>
+                        <outlet property="searchDisplayController" destination="iks-BP-BMQ" id="6bG-EG-JvX"/>
+                        <outlet property="tableView" destination="auy-1T-8Rz" id="7ZE-6O-Ike"/>
                         <segue destination="TpJ-RH-D2i" kind="show" id="n2N-ST-iQp"/>
                     </connections>
                 </viewController>
@@ -106,8 +129,16 @@
                         <outlet property="searchResultsDelegate" destination="IXp-yB-Fht" id="AKO-wd-qgy"/>
                     </connections>
                 </searchDisplayController>
+                <searchDisplayController id="iks-BP-BMQ">
+                    <connections>
+                        <outlet property="delegate" destination="IXp-yB-Fht" id="Eas-bC-iwc"/>
+                        <outlet property="searchContentsController" destination="IXp-yB-Fht" id="mLw-nQ-qcQ"/>
+                        <outlet property="searchResultsDataSource" destination="IXp-yB-Fht" id="jcH-YR-3AR"/>
+                        <outlet property="searchResultsDelegate" destination="IXp-yB-Fht" id="pgH-xp-wK1"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3900" y="-165"/>
+            <point key="canvasLocation" x="3900" y="-165.06746626686657"/>
         </scene>
         <!--Conversation-->
         <scene sceneID="zYK-C0-lvz">
