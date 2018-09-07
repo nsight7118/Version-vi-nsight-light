@@ -117,7 +117,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="iks-BP-BMQ" id="6bG-EG-JvX"/>
                         <outlet property="tableView" destination="auy-1T-8Rz" id="7ZE-6O-Ike"/>
-                        <segue destination="TpJ-RH-D2i" kind="show" id="n2N-ST-iQp"/>
+                        <segue destination="TpJ-RH-D2i" kind="show" identifier="showDetail" id="n2N-ST-iQp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plp-Cy-Mfi" userLabel="First Responder" sceneMemberID="firstResponder"/>

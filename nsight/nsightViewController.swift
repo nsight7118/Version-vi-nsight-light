@@ -99,7 +99,7 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
     
         // Setup the Search Controller
-        searchController.searchResultsUpdater = self
+        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Discussions"
         navigationItem.searchController = searchController
