@@ -54,19 +54,29 @@ class nsightTableViewController: UITableViewController {
         var imgs = [UIImage]()
         
         imgs.append(#imageLiteral(resourceName: "Image"))
+        imgs.append(#imageLiteral(resourceName: "2"))
         imgs.append(#imageLiteral(resourceName: "English"))
+        imgs.append(#imageLiteral(resourceName: "5"))
+        imgs.append(#imageLiteral(resourceName: "6"))
+        imgs.append(#imageLiteral(resourceName: "7"))
+        imgs.append(#imageLiteral(resourceName: "1"))
         
         let item1 = DiscussionViewModelEmailItem(email:i.title!);
         let item2 =  DiscussionVIewModelTitleItem(image:imgs[Int(selectedId)])
         let item3 = DiscussionViewModelEmailItem(email: i.profile_email!)
         let item4 = DiscussionViewModelEmailItem(email:i.content!)
         let item5 = DiscussionViewModelEmailItem(email:i.clasification!)
+        let item6 = DiscussionViewModelCommentsItem(comments: [Comment]())
         
-        viewModel.items.append(item2);
-        viewModel.items.append(item1);
-        viewModel.items.append(item5);
-        viewModel.items.append(item3);
-        viewModel.items.append(item1);    }
+        viewModel.items.append(item2)
+        viewModel.items.append(item1)
+        viewModel.items.append(item6)
+        viewModel.items.append(item5)
+        viewModel.items.append(item3)
+        viewModel.items.append(item1)
+        viewModel.items.append(item4)
+        
+    }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Here, we use NSFetchedResultsController

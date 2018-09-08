@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class SampleDiscussions
 {
     var discusions = [Discussion]()
