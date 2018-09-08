@@ -26,15 +26,7 @@ class SampleDiscussions
     com.append(Comment(id:0,content:"Hi"))
     com.append(Comment(id:1,content:"Hey"))
 
-    let item1 = DiscussionViewModelEmailItem(email:"Eureka");
-    let item2 =  DiscussionVIewModelTitleItem(image:#imageLiteral(resourceName: "English"))
-    let item3 = DiscussionViewModelCommentsItem(comments: com)
-
-    items.append(item2);
-    items.append(item1);
-    items.append(item1);
-    items.append(item3);
-    items.append(item1);
+    
     }
     
     func addDiscussions()

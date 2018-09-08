@@ -12,14 +12,18 @@ import UIKit
 class nsightTableViewController: UITableViewController {
     
     var viewModel = DiscussionViewModel()
+    
+    var discussions = SampleDiscussions()
    
+    var selectedId: Int8 = 0
+    
     override func viewDidLoad() {
         self.tableView.delegate = self
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(logout))
     
-    
+        populate()
            //self.tableView.backgroundColor = UIColor.lightGray
         //tableView.dataSource = self;
         
@@ -40,6 +44,26 @@ class nsightTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    
+    func populate()
+    {
+        let i = discussions.discusions[Int(selectedId)]
+        
+        var imgs = [UIImage]()
+        
+        imgs.append(#imageLiteral(resourceName: "Image"))
+        imgs.append(#imageLiteral(resourceName: "English"))
+        
+        let item1 = DiscussionViewModelEmailItem(email:i.title!);
+        let item2 =  DiscussionVIewModelTitleItem(image:imgs[Int(selectedId)])
+        
+        
+        viewModel.items.append(item2);
+        viewModel.items.append(item1);
+        viewModel.items.append(item1);
+        viewModel.items.append(item1);
+        viewModel.items.append(item1);    }
+    
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
         

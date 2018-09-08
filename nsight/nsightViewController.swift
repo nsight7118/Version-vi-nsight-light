@@ -15,9 +15,6 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-
-    
     var items = [DiscussionViewModelItem]()
     
     var discussions = [Discussion]()
@@ -25,6 +22,8 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     var filteredDiscussions = [Discussion]()
     
     var discussionSearchResult = [Discussion]()
+    
+    var selectedId: Int8 = 0
     
     func searchBarIsEmpty() -> Bool {
         // Returns true if the text is empty or nil
@@ -43,16 +42,44 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
             }
         })
 
-        
-        
-        
         self.tableView!.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showDetail"){
+            let vc = segue.destination as! nsightTableViewController
+            
+                vc.selectedId = selectedId
+        }
+    }
 
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
+    {
+        var i = Discussion(_Id: 0, _title: "", _content: "", _email: "", _about: "", _audience: "", _classification: "")
+        
+        if isFiltering()
+        {
+            i = filteredDiscussions[indexPath.row]
+        }
+        else
+        {
+            i = discussions[indexPath.row]
+        }
+        //self.navigationController?.navigationBar.isHidden = true
+        
+        selectedId = i.id
+        
+        performSegue(withIdentifier: "showDetail" , sender: i.id )
+        
+        //let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        //let vc = sb.instantiateViewController(withIdentifier:"Conversation") as! ConversationViewController
+        //self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func isFiltering() -> Bool {
         let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
@@ -75,10 +102,6 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         return discussions.count
     }
     
-
-    
-
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let _discussion:Discussion
@@ -91,6 +114,7 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         }
         
         cell.textLabel?.text = _discussion.title
+        cell.accessoryType = .detailDisclosureButton
         
         return cell
     }
@@ -99,7 +123,7 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
     
         // Setup the Search Controller
-        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.searchResultsUpdater = self as UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Discussions"
         navigationItem.searchController = searchController
@@ -115,7 +139,6 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
         searchController.searchBar.scopeButtonTitles = ["All", "Students", "Parents","Teachers","Principals"]
         searchController.searchBar.delegate = self
         
-        
         discussions = data.discusions
         
     //let dnahue = UIColor(red:172/255, green:178/255, blue:128/255,alpha: 1.0)
@@ -128,7 +151,6 @@ class NsightViewController : UIViewController, UITableViewDataSource, UITableVie
     @objc func logout()
     {
       dismiss(animated: true, completion: nil)
-        
     }
     
 }
@@ -141,14 +163,11 @@ extension NsightViewController: UISearchBarDelegate {
     }
 }
 
-
 extension NsightViewController: UISearchResultsUpdating {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
-    
-    
-    
+
 }
 
 
