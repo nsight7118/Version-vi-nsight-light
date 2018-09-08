@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class cellFooter
+class CellFooter: UITableViewHeaderFooterView
 {
-    
+    @IBOutlet weak var button: UIButton!
 }

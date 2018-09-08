@@ -22,7 +22,7 @@ class TitleCell : UITableViewCell, ProtocolElelmentCell {
     }()
     
     var titleImageView : UIImageView = {
-        var imageView = UIImageView(frame: CGRect(x: 60, y: 0, width: 280, height: 380))
+        var imageView = UIImageView(frame: CGRect(x: 60, y: 0, width: 200, height: 340))
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = true
         //imageView.backgroundColor = UIColor.green.withAlphaComponent(0.07)

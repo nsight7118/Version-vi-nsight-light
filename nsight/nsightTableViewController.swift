@@ -30,7 +30,9 @@ class nsightTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
 
+        let nib = UINib(nibName: "TableSectionFooter", bundle: nil)
         
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier: "TableSectionFooter")
         self.tableView?.register(EmailCell.self, forCellReuseIdentifier: "email")
         self.tableView?.register(TitleCell.self, forCellReuseIdentifier: "title")
         self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "comment")
@@ -64,6 +66,29 @@ class nsightTableViewController: UITableViewController {
         viewModel.items.append(item1);
         viewModel.items.append(item1);    }
     
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // Here, we use NSFetchedResultsController
+        // And we simply use the section name as title
+        
+        let vw = UIView()
+        
+        // Dequeue with the reuse identifier
+        let cell = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "TableSectionFooter")
+       
+        let btn = UIButton()
+        
+        btn.titleLabel?.text = "more.."
+        
+        vw.addSubview((cell)!)
+        
+        return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+        
+        
+    }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
         
@@ -80,11 +105,11 @@ class nsightTableViewController: UITableViewController {
     }
     
     
-    
+    /*
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     
         let vw = UIView()
-     /*
+     
         let tv = UITextView()
         
         tv.text = "Nalin"
@@ -95,11 +120,11 @@ class nsightTableViewController: UITableViewController {
         tv.topAnchor.constraint(equalTo: vw.topAnchor).isActive = true
         tv.bottomAnchor.constraint(equalTo: vw.bottomAnchor).isActive = true
         tv.rightAnchor.constraint(equalTo: vw.rightAnchor).isActive = true
-      */
+ 
         vw.backgroundColor = UIColor(red:0.65, green: 0.84, blue: 0.65, alpha:1.0)
         
         return vw
     }
- 
+ */
     
 }

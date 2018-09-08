@@ -15,7 +15,6 @@
 		F500EFA2213F6CEB002DE3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F500EFA1213F6CEB002DE3AC /* Assets.xcassets */; };
 		F546EF07212B9C4100441D80 /* nsightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546EF06212B9C4100441D80 /* nsightTableViewController.swift */; };
 		F5522C682129B8B900A00D09 /* ViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C622129B8B800A00D09 /* ViewController 2.swift */; };
-		F5522C692129B8B900A00D09 /* nsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C632129B8B800A00D09 /* nsightViewController.swift */; };
 		F5522C6A2129B8B900A00D09 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C642129B8B800A00D09 /* PostManager.swift */; };
 		F5522C6B2129B8B900A00D09 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C652129B8B800A00D09 /* PostViewController.swift */; };
 		F5522C6C2129B8B900A00D09 /* DBScaffolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C662129B8B800A00D09 /* DBScaffolding.swift */; };
@@ -24,6 +23,7 @@
 		F5716B3921400B4D00A93131 /* SampleDiscussions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5716B3821400B4D00A93131 /* SampleDiscussions.swift */; };
 		F5716B3B2143582700A93131 /* TableSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5716B3A2143582700A93131 /* TableSectionFooter.xib */; };
 		F5716B3D21435A0500A93131 /* CellFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5716B3C21435A0500A93131 /* CellFooter.swift */; };
+		F5716B3F21440D3000A93131 /* nsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5716B3E21440D3000A93131 /* nsightViewController.swift */; };
 		F57ACE832135ABFE00933C47 /* DiscussionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE822135ABFE00933C47 /* DiscussionViewModel.swift */; };
 		F57ACE852135BCB500933C47 /* EmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE842135BCB500933C47 /* EmailCell.swift */; };
 		F57ACE952135BEB800933C47 /* DiscussionViewModelItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE8F2135BEB800933C47 /* DiscussionViewModelItemType.swift */; };
@@ -55,7 +55,6 @@
 		F500EFA1213F6CEB002DE3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F546EF06212B9C4100441D80 /* nsightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nsightTableViewController.swift; sourceTree = "<group>"; };
 		F5522C622129B8B800A00D09 /* ViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
-		F5522C632129B8B800A00D09 /* nsightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nsightViewController.swift; sourceTree = "<group>"; };
 		F5522C642129B8B800A00D09 /* PostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 		F5522C652129B8B800A00D09 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F5522C662129B8B800A00D09 /* DBScaffolding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBScaffolding.swift; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		F5716B3821400B4D00A93131 /* SampleDiscussions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDiscussions.swift; sourceTree = "<group>"; };
 		F5716B3A2143582700A93131 /* TableSectionFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSectionFooter.xib; sourceTree = "<group>"; };
 		F5716B3C21435A0500A93131 /* CellFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFooter.swift; sourceTree = "<group>"; };
+		F5716B3E21440D3000A93131 /* nsightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nsightViewController.swift; sourceTree = "<group>"; };
 		F57ACE822135ABFE00933C47 /* DiscussionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionViewModel.swift; sourceTree = "<group>"; };
 		F57ACE842135BCB500933C47 /* EmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCell.swift; sourceTree = "<group>"; };
 		F57ACE8F2135BEB800933C47 /* DiscussionViewModelItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionViewModelItemType.swift; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 		F5B7FFA92120DB370063D070 = {
 			isa = PBXGroup;
 			children = (
-				F5716B3A2143582700A93131 /* TableSectionFooter.xib */,
 				F5B7FFB42120DB370063D070 /* nsight */,
 				F5B7FFB32120DB370063D070 /* Products */,
 				88B9A331F9F70AD57EECDCD6 /* Pods */,
@@ -154,6 +153,8 @@
 		F5B7FFB42120DB370063D070 /* nsight */ = {
 			isa = PBXGroup;
 			children = (
+				F5716B3E21440D3000A93131 /* nsightViewController.swift */,
+				F5716B3A2143582700A93131 /* TableSectionFooter.xib */,
 				F500EFA1213F6CEB002DE3AC /* Assets.xcassets */,
 				F500EF9D213DDE58002DE3AC /* MockMessage.swift */,
 				F500EF9E213DDE58002DE3AC /* SampleData.swift */,
@@ -165,7 +166,6 @@
 				F57ACE862135BDF500933C47 /* ViewModel */,
 				F5CA74B0212BA69600451FFC /* Model */,
 				F5522C662129B8B800A00D09 /* DBScaffolding.swift */,
-				F5522C632129B8B800A00D09 /* nsightViewController.swift */,
 				F5522C642129B8B800A00D09 /* PostManager.swift */,
 				F5522C652129B8B800A00D09 /* PostViewController.swift */,
 				F5522C622129B8B800A00D09 /* ViewController 2.swift */,
@@ -307,7 +307,6 @@
 				F5716B3D21435A0500A93131 /* CellFooter.swift in Sources */,
 				F500EFA0213DDE58002DE3AC /* SampleData.swift in Sources */,
 				F5522C6D2129B8B900A00D09 /* nsightTabController.swift in Sources */,
-				F5522C692129B8B900A00D09 /* nsightViewController.swift in Sources */,
 				F57ACE852135BCB500933C47 /* EmailCell.swift in Sources */,
 				F5B7FFBE2120DB370063D070 /* nsight.xcdatamodeld in Sources */,
 				F5522C6B2129B8B900A00D09 /* PostViewController.swift in Sources */,
@@ -320,6 +319,7 @@
 				F57ACE952135BEB800933C47 /* DiscussionViewModelItemType.swift in Sources */,
 				F57ACE832135ABFE00933C47 /* DiscussionViewModel.swift in Sources */,
 				F57ACE962135BEB800933C47 /* DiscussionViewModelEmailItem.swift in Sources */,
+				F5716B3F21440D3000A93131 /* nsightViewController.swift in Sources */,
 				F500EF9A213DD377002DE3AC /* CommentCell.swift in Sources */,
 				F57ACE9C2136BC1B00933C47 /* ProtocolElementCell.swift in Sources */,
 				F57ACE972135BEB800933C47 /* DiscussionViewModelCommentsItem.swift in Sources */,

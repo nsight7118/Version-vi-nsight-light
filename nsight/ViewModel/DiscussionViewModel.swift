@@ -121,12 +121,12 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
     
     
     
-    
+    /*
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let header = items[section].sectionTitile
         return header
     }
-    
+    */
     func numberOfSections(in tableView: UITableView) -> Int {
          return 5
     }
