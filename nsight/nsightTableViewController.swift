@@ -58,12 +58,14 @@ class nsightTableViewController: UITableViewController {
         
         let item1 = DiscussionViewModelEmailItem(email:i.title!);
         let item2 =  DiscussionVIewModelTitleItem(image:imgs[Int(selectedId)])
-        
+        let item3 = DiscussionViewModelEmailItem(email: i.profile_email!)
+        let item4 = DiscussionViewModelEmailItem(email:i.content!)
+        let item5 = DiscussionViewModelEmailItem(email:i.clasification!)
         
         viewModel.items.append(item2);
         viewModel.items.append(item1);
-        viewModel.items.append(item1);
-        viewModel.items.append(item1);
+        viewModel.items.append(item5);
+        viewModel.items.append(item3);
         viewModel.items.append(item1);    }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -85,7 +87,7 @@ class nsightTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 10
         
         
     }

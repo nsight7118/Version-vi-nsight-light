@@ -52,16 +52,16 @@ class SampleDiscussions
             _audience: "Teachers",
             _classification: "Challenges"
         )
-        var Discussion3 = Discussion(
+        let Discussion3 = Discussion(
             _Id: 2,
             _title: "Is assessment unfair?",
             _content: "How do teachers assess, and are they thinking of student needs when they design tasks to deduct progression in learning and gaps in curriculum design?      In a recent article in The Conversation as part of its Educating Australia series, Geoff Masters (CEO, Australian Council for Educational Research) called for an alternative approach to assessment that he called monitoring learning. In this model ‘is a belief that every learner is capable of further progress if they can be engaged, motivated to make the appropriate effort and provided with targeted learning opportunities’.Masters argued that the current approach to assessment dooms young people to always perform the same; that an A grade student will always achieve A grades, and a D grade student will always achieve a D grade.",
             _email: "jayanthi@enlighten.com",
             _about: "this is it!",
-            _audience: "Educators",
+            _audience: "Teachers",
             _classification: "Challenges"
         )
-        var Discussion4 = Discussion(
+        let Discussion4 = Discussion(
             _Id: 3,
             _title: "Thinking back to move our English language learners forward",
             _content: "Module 5 concludes our course Teaching students from a refugee background (c) State of NSW (Dept 0f Education) 2016. Looking at the module outline I have been pondering why it bears the simple title, Teaching Writing – but more of that later.To be able to write well is definitely ‘hard work’. Stephen King says that, the scariest moment is always just before you start. John O’Hara is of the opinion that becoming a reader is the essence of becoming a writer and Doris Lessing insists that you only learn to be a better writer by actually writing. Our goal as teachers of English Language (EL) learners is to scaffold our lessons through activities that involve substantive conversations and immersion in rich texts so that our students are not afraid to put pen to paper.How can we as teachers help our students to progress from being able to write and copy simple texts at level 1 of the ESL Scales through to communicating effectively to fulfil the literacy and learning requirements of most written tasks",
@@ -70,10 +70,40 @@ class SampleDiscussions
             _audience: "Parents",
             _classification: "Challenges"
         )
-        var Discussion5 = Discussion(
+        let Discussion5 = Discussion(
             _Id: 4,
             _title: "Your Future",
             _content: "Education is extremely important nowadays. We live in a world where educated and skilled individuals have better conditions and more successful lives. The job marketplace is also focused on hiring millennials that have knowledge in specific fields.If you choose to educate yourself while you’re still in college, you’ll improve your chances of reaching your long-term goals. The value that you can provide to the marketplace will dictate your revenue and social status. If you’re educated enough and well trained in a specific field, you can be successful. Nowadays, there are a lot of educational blogs on the web. From math to painting, you can find blogs for almost any type of domain of activity, niche, hobby, and profession. With the modern search engines, you just type in a key phrase and you’ll find whatever you want.Following a professional educational blog is productive in many ways. First, you can consume content from a professional who dedicates his entire time to master that specific field of activity. Learning and applying his tips and strategies is ten times more constructive than listening to a professor that’s presenting a lecture.",
+            _email: "jayanthi@enlighten.com",
+            _about: "this is it!",
+            _audience: "Students",
+            _classification: "Goals"
+        )
+        
+        let Discussion6 = Discussion(
+            _Id: 5,
+            _title: "Thank You Brain",
+            _content: "If we can improve our brain functionality it is obvious that we’ll be able to perform better. We can learn faster, do more skills, retain more information, and so on.  is a blog Thank you brain is specifically designed and purposed to help individuals improve their cognitive abilities.",
+            _email: "jayanthi@enlighten.com",
+            _about: "this is it!",
+            _audience: "Students",
+            _classification: "Goals"
+        )
+        
+        let Discussion7 = Discussion(
+            _Id: 6,
+            _title: "Literacy Shed",
+            _content: "This is the blog for the Literacy Shed website which is by far the biggest of the different sheds with resources on various topics. There are many others such as Numeracy Shed  and the  Music Shed which are all interesting to explore. The author, Rob Smith, when not travelling the globe of raising money for charity and organising resources finds makes time to write blog as well.  Posts are generally reading, writing and literacy based but could be about anything the author feels like at the time.",
+            _email: "jayanthi@enlighten.com",
+            _about: "this is it!",
+            _audience: "Parents",
+            _classification: "Goals"
+        )
+        
+        let Discussion8 = Discussion(
+            _Id: 7,
+            _title: "Mr. P 's ICT Blog",
+            _content: "Mr P is a primary teacher and iPad advocate. He engages students with literacy by encouraging the use of media and video and his students seem well on the way to becoming tech experts. There are some excellent examples about how he has introduced technology into the classroom with lots of videos and images embedded into each post. His primary blog has been well received within the blogging community having been nominated for various awards.",
             _email: "jayanthi@enlighten.com",
             _about: "this is it!",
             _audience: "Students",
@@ -84,6 +114,8 @@ class SampleDiscussions
         discusions.append(Discussion3)
         discusions.append(Discussion4)
         discusions.append(Discussion5)
+        discusions.append(Discussion6)
+        discusions.append(Discussion7)
     
     }
 }
