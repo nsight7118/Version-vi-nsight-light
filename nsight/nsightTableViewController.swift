@@ -47,6 +47,16 @@ class nsightTableViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showDetail"){
+            let vc = segue.destination as! NsightReaderController
+            
+            let i = viewModel.items[6] as! Discussion
+            
+            vc.Content = (i.content)!
+        }
+    }
+    
     func populate()
     {
         let i = discussions.discusions[Int(selectedId)]

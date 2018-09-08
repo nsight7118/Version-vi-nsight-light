@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var logo: UIImageView!
     @IBAction func SignInAction(_ sender: Any) {
         performSegue(withIdentifier: "SignIn", sender: sender)
     }
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = dnahue
         
+        logo.image = #imageLiteral(resourceName: "cell")
         
         // Do any additional setup after loading the view, typically from a nib.
     }

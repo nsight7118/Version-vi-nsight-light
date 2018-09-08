@@ -60,6 +60,9 @@
                                 <rect key="frame" x="292" y="553" width="48" height="30"/>
                                 <state key="normal" title="Signup"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uK3-Ug-qov">
+                                <rect key="frame" x="161" y="587" width="53" height="52"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -68,7 +71,9 @@
                             <constraint firstItem="Yx7-9Q-MXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="292" id="BoQ-Sn-3rW"/>
                             <constraint firstItem="xa0-US-cUB" firstAttribute="top" secondItem="GVD-td-JGi" secondAttribute="bottom" constant="15" id="EL5-zS-xH5"/>
                             <constraint firstItem="mdi-R8-CPJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="Pcp-vZ-vcf"/>
+                            <constraint firstItem="uK3-Ug-qov" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161" id="SAv-DY-xGd"/>
                             <constraint firstItem="mdi-R8-CPJ" firstAttribute="top" secondItem="GVD-td-JGi" secondAttribute="bottom" constant="397" id="Tek-h1-1kz"/>
+                            <constraint firstItem="uK3-Ug-qov" firstAttribute="top" secondItem="GVD-td-JGi" secondAttribute="bottom" constant="474" id="Z4D-aM-2qJ"/>
                             <constraint firstItem="GVD-td-JGi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="dzN-WI-5vH"/>
                             <constraint firstItem="GVD-td-JGi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="kd5-Bd-HrV"/>
                             <constraint firstItem="9n4-hv-xvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="292" id="q5F-FK-Ddm"/>
@@ -76,6 +81,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="logo" destination="uK3-Ug-qov" id="rPD-LI-vtD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,6 +24,7 @@
 		F5716B3B2143582700A93131 /* TableSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5716B3A2143582700A93131 /* TableSectionFooter.xib */; };
 		F5716B3D21435A0500A93131 /* CellFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5716B3C21435A0500A93131 /* CellFooter.swift */; };
 		F5716B3F21440D3000A93131 /* nsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5716B3E21440D3000A93131 /* nsightViewController.swift */; };
+		F5716B412144964000A93131 /* NsightReaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5716B402144964000A93131 /* NsightReaderController.swift */; };
 		F57ACE832135ABFE00933C47 /* DiscussionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE822135ABFE00933C47 /* DiscussionViewModel.swift */; };
 		F57ACE852135BCB500933C47 /* EmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE842135BCB500933C47 /* EmailCell.swift */; };
 		F57ACE952135BEB800933C47 /* DiscussionViewModelItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE8F2135BEB800933C47 /* DiscussionViewModelItemType.swift */; };
@@ -64,6 +65,7 @@
 		F5716B3A2143582700A93131 /* TableSectionFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSectionFooter.xib; sourceTree = "<group>"; };
 		F5716B3C21435A0500A93131 /* CellFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFooter.swift; sourceTree = "<group>"; };
 		F5716B3E21440D3000A93131 /* nsightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nsightViewController.swift; sourceTree = "<group>"; };
+		F5716B402144964000A93131 /* NsightReaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NsightReaderController.swift; sourceTree = "<group>"; };
 		F57ACE822135ABFE00933C47 /* DiscussionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionViewModel.swift; sourceTree = "<group>"; };
 		F57ACE842135BCB500933C47 /* EmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCell.swift; sourceTree = "<group>"; };
 		F57ACE8F2135BEB800933C47 /* DiscussionViewModelItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionViewModelItemType.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				F5B7FFBC2120DB370063D070 /* nsight.xcdatamodeld */,
 				F546EF06212B9C4100441D80 /* nsightTableViewController.swift */,
 				F5716B3C21435A0500A93131 /* CellFooter.swift */,
+				F5716B402144964000A93131 /* NsightReaderController.swift */,
 			);
 			path = nsight;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5716B3D21435A0500A93131 /* CellFooter.swift in Sources */,
+				F5716B412144964000A93131 /* NsightReaderController.swift in Sources */,
 				F500EFA0213DDE58002DE3AC /* SampleData.swift in Sources */,
 				F5522C6D2129B8B900A00D09 /* nsightTabController.swift in Sources */,
 				F57ACE852135BCB500933C47 /* EmailCell.swift in Sources */,
