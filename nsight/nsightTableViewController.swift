@@ -77,7 +77,7 @@ class nsightTableViewController: UITableViewController {
         let item4 = DiscussionViewModelEmailItem(email:i.content!)
         let item5 = DiscussionViewModelEmailItem(email:i.clasification!)
         let item6 = DiscussionViewModelCommentsItem(comments: [Comment]())
-        
+        let item7 = DiscussionViewModelAboutItem(_details:i.content!)
         viewModel.items.append(item2)
         viewModel.items.append(item1)
         viewModel.items.append(item6)

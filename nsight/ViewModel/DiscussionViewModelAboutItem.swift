@@ -8,20 +8,20 @@
 
 import Foundation
 
-class DiscussionViewModelEmailItem: DiscussionViewModelItem
+class DiscussionViewModelAboutItem: DiscussionViewModelItem
 {
     var type: DiscussionViewModelItemType {
-        return .profile_email
+        return .about
     }
     
     var sectionTitile: String {
-        return "Profile Email"
+        return "About.."
     }
     
-    var email: String
+    var details: String
     
-    init(email: String) {
-        self.email = email
+    init(_details: String) {
+        self.details = _details
     }
     
 }
