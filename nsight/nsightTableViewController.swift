@@ -48,12 +48,12 @@ class nsightTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showDetail"){
+        if (segue.identifier == "Reader"){
             let vc = segue.destination as! NsightReaderController
+            populate()
+            let i = viewModel.items[5] as! DiscussionViewModelEmailItem
             
-            let i = viewModel.items[5] as! Discussion
-            
-            vc.Content = (i.content)!
+            //vc.Content = (i.email)
         }
     }
     
@@ -74,10 +74,10 @@ class nsightTableViewController: UITableViewController {
         let item1 = DiscussionViewModelEmailItem(email:i.title!);
         let item2 =  DiscussionVIewModelTitleItem(image:imgs[Int(selectedId)])
         let item3 = DiscussionViewModelEmailItem(email: i.profile_email!)
-        let item4 = DiscussionViewModelEmailItem(email:i.content!)
+        let item4 = DiscussionViewModelEmailItem(email:i.title!)
         let item5 = DiscussionViewModelEmailItem(email:i.clasification!)
         let item6 = DiscussionViewModelCommentsItem(comments: [Comment]())
-        let item7 = DiscussionViewModelAboutItem(_details:i.title!)
+        let item7 = DiscussionViewModelAboutItem(_details:i.content!)
         viewModel.items.append(item2)
         viewModel.items.append(item7)
         viewModel.items.append(item6)

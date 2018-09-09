@@ -102,8 +102,9 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                     cell.email = "notyet"
                 }
                 
-                cell.accessoryType = .detailDisclosureButton
+                //cell.accessoryType = .detailDisclosureButton
                 cell.contentView.backgroundColor = UIColor(red:0.68,green: 0.84, blue: 0.51, alpha:1.0)
+                
                 return cell
             }
         case .comments:

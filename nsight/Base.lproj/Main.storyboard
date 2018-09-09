@@ -223,6 +223,15 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwc-lT-8dm">
                                 <rect key="frame" x="16" y="80" width="343" height="442"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-Gf-JmG">
+                                        <rect key="frame" x="8" y="0.0" width="327" height="434"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -230,6 +239,9 @@
                         <viewLayoutGuide key="safeArea" id="4jE-zz-Jsb"/>
                     </view>
                     <navigationItem key="navigationItem" id="mxf-VV-JOi"/>
+                    <connections>
+                        <outlet property="Reader" destination="BBq-Gf-JmG" id="KLN-48-uhr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Klt-54-gxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

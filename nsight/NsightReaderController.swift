@@ -13,10 +13,20 @@ class NsightReaderController : UIViewController
 {
     var Content: String = ""
     
-    override func viewDidLoad() 
+    @IBOutlet weak var Reader: UILabel!
+    
+    
+    
+    override func viewDidLoad()
     {
         super.viewDidLoad()
+        Reader.text = Content
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
+    }
+    
+    @objc func back(){
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
