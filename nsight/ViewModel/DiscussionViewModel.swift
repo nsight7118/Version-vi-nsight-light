@@ -95,14 +95,14 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
                 if let about = item as? DiscussionViewModelAboutItem
                 {
-                    cell.email = about.sectionTitile
+                    cell.email = about.details
                 }
                 else
                 {
                     cell.email = "notyet"
                 }
                 
-                cell.accessoryType = .detailButton
+                cell.accessoryType = .detailDisclosureButton
                 cell.contentView.backgroundColor = UIColor(red:0.68,green: 0.84, blue: 0.51, alpha:1.0)
                 return cell
             }

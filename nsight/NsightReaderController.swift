@@ -11,7 +11,7 @@ import UIKit
 
 class NsightReaderController : UIViewController
 {
-    var Content: String
+    var Content: String = ""
     
     override func viewDidLoad() 
     {
@@ -19,7 +19,4 @@ class NsightReaderController : UIViewController
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }

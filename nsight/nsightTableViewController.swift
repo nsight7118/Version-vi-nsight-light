@@ -51,7 +51,7 @@ class nsightTableViewController: UITableViewController {
         if (segue.identifier == "showDetail"){
             let vc = segue.destination as! NsightReaderController
             
-            let i = viewModel.items[6] as! Discussion
+            let i = viewModel.items[5] as! Discussion
             
             vc.Content = (i.content)!
         }
@@ -83,7 +83,7 @@ class nsightTableViewController: UITableViewController {
         viewModel.items.append(item6)
         viewModel.items.append(item5)
         viewModel.items.append(item3)
-        viewModel.items.append(item1)
+        //viewModel.items.append(item1)
         viewModel.items.append(item4)
         
     }
@@ -115,11 +115,17 @@ class nsightTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
         
     {
-        if (indexPath.row == 1)
+        if (indexPath.section == 1)
         {
         //self.navigationController?.navigationBar.isHidden = true
         
         performSegue(withIdentifier: "Reader" , sender: nil)
+        }
+        else if (indexPath.section == 2)
+        {
+            //self.navigationController?.navigationBar.isHidden = true
+            
+            performSegue(withIdentifier: "ConversationView" , sender: nil)
         }
         //let sb = UIStoryboard(name: "Main", bundle: nil)
         
