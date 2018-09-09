@@ -94,6 +94,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         case .about:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "email", for: indexPath) as? EmailCell {
                 cell.email = item.sectionTitile
+                cell.accessoryType = .detailButton
                 cell.contentView.backgroundColor = UIColor(red:0.68,green: 0.84, blue: 0.51, alpha:1.0)
                 return cell
             }

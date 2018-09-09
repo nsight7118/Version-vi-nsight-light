@@ -115,11 +115,12 @@ class nsightTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
         
     {
-        
+        if (indexPath.row == 1)
+        {
         //self.navigationController?.navigationBar.isHidden = true
         
-        performSegue(withIdentifier: "ConversationView" , sender: nil)
-        
+        performSegue(withIdentifier: "Reader" , sender: nil)
+        }
         //let sb = UIStoryboard(name: "Main", bundle: nil)
         
         //let vc = sb.instantiateViewController(withIdentifier:"Conversation") as! ConversationViewController
