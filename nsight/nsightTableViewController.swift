@@ -49,7 +49,12 @@ class nsightTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Reader"){
-            let vc = segue.destination as! NsightReaderController
+            
+
+
+
+
+let vc = segue.destination as! NsightReaderController
             populate()
             let i = viewModel.items[5] as! DiscussionViewModelEmailItem
             

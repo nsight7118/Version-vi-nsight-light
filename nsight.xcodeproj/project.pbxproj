@@ -19,6 +19,7 @@
 		F5522C6B2129B8B900A00D09 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C652129B8B800A00D09 /* PostViewController.swift */; };
 		F5522C6C2129B8B900A00D09 /* DBScaffolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C662129B8B800A00D09 /* DBScaffolding.swift */; };
 		F5522C6D2129B8B900A00D09 /* nsightTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C672129B8B800A00D09 /* nsightTabController.swift */; };
+		F552D2BE2144F907008EB63E /* Nsight-Light-Enlighten.mov in Resources */ = {isa = PBXBuildFile; fileRef = F552D2BD2144F907008EB63E /* Nsight-Light-Enlighten.mov */; };
 		F55AA7DC213AF331008A79E0 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AA7DB213AF331008A79E0 /* TitleCell.swift */; };
 		F5716B3921400B4D00A93131 /* SampleDiscussions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5716B3821400B4D00A93131 /* SampleDiscussions.swift */; };
 		F5716B3B2143582700A93131 /* TableSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5716B3A2143582700A93131 /* TableSectionFooter.xib */; };
@@ -61,6 +62,7 @@
 		F5522C652129B8B800A00D09 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F5522C662129B8B800A00D09 /* DBScaffolding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBScaffolding.swift; sourceTree = "<group>"; };
 		F5522C672129B8B800A00D09 /* nsightTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nsightTabController.swift; sourceTree = "<group>"; };
+		F552D2BD2144F907008EB63E /* Nsight-Light-Enlighten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Nsight-Light-Enlighten.mov"; sourceTree = "<group>"; };
 		F55AA7DB213AF331008A79E0 /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		F5716B3821400B4D00A93131 /* SampleDiscussions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDiscussions.swift; sourceTree = "<group>"; };
 		F5716B3A2143582700A93131 /* TableSectionFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSectionFooter.xib; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		F5B7FFB42120DB370063D070 /* nsight */ = {
 			isa = PBXGroup;
 			children = (
+				F552D2BD2144F907008EB63E /* Nsight-Light-Enlighten.mov */,
 				F5716B3E21440D3000A93131 /* nsightViewController.swift */,
 				F5716B3A2143582700A93131 /* TableSectionFooter.xib */,
 				F500EFA1213F6CEB002DE3AC /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 				F500EFA2213F6CEB002DE3AC /* Assets.xcassets in Resources */,
 				F5B7FFBB2120DB370063D070 /* Main.storyboard in Resources */,
 				F5716B3B2143582700A93131 /* TableSectionFooter.xib in Resources */,
+				F552D2BE2144F907008EB63E /* Nsight-Light-Enlighten.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
