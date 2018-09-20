@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var i: Int = 0
+    
     @IBOutlet weak var logo: UIImageView!
     @IBAction func SignInAction(_ sender: Any) {
         performSegue(withIdentifier: "SignIn", sender: sender)
@@ -23,20 +25,29 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = dnahue
         
+        
         logo.image = #imageLiteral(resourceName: "cell")
         
         animateLogo()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         animateLogo()
+        i = i + 1
         
     }
 
     func animateLogo()
     {
-        UIView.animate(withDuration: 1,animations: { self.logo.frame.origin.y += 300})
+        if ( i == 0 )
+        {
+            return
+        }
+        
+        UIView.animate(withDuration: 1,animations: { self.logo.frame.origin.y += 40})
     }
     
     override func didReceiveMemoryWarning() {
