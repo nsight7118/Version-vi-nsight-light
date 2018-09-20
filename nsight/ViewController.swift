@@ -25,13 +25,26 @@ class ViewController: UIViewController {
         
         logo.image = #imageLiteral(resourceName: "cell")
         
+        animateLogo()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        animateLogo()
+        
+    }
 
+    func animateLogo()
+    {
+        UIView.animate(withDuration: 1,animations: { self.logo.frame.origin.y += 300})
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 
 }
