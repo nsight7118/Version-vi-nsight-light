@@ -111,8 +111,24 @@ let vc = segue.destination as! NsightReaderController
         return cell!
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section
+        {
+        case 0: return 340
+        case 1: return 300
+        default: return 40
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        
+        switch section
+        {
+        case 0: return 0
+        case 1: return 0
+        default: return 4
+        }
+        
         
         
     }

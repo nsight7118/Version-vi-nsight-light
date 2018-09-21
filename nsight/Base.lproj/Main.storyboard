@@ -206,6 +206,7 @@
                     <connections>
                         <segue destination="E4J-KM-7me" kind="relationship" relationship="viewControllers" id="3iA-AT-L7A"/>
                         <segue destination="uE6-oY-8ap" kind="relationship" relationship="viewControllers" id="xPv-LJ-gkb"/>
+                        <segue destination="5cf-ng-ZmN" kind="relationship" relationship="viewControllers" id="oJa-nJ-Iny"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQn-NQ-Wbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,19 +267,17 @@
             </objects>
             <point key="canvasLocation" x="2301.5999999999999" y="812.74362818590714"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="Q8x-yc-JFu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5cf-ng-ZmN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="Tab-Bar-Icon" id="eIa-OR-6ik"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P00-9m-YN6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ZZk-kf-nwV" kind="relationship" relationship="rootViewController" id="Bjd-65-zd3"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFn-Hj-WCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,7 +321,11 @@
             <point key="canvasLocation" x="3368.8000000000002" y="1593.5532233883059"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tab-Bar-Icon" width="37" height="37"/>
+    </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="oJa-nJ-Iny"/>
         <segue reference="n2N-ST-iQp"/>
     </inferredMetricsTieBreakers>
 </document>
