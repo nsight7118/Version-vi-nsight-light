@@ -13,6 +13,7 @@
 		F500EF9F213DDE58002DE3AC /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9D213DDE58002DE3AC /* MockMessage.swift */; };
 		F500EFA0213DDE58002DE3AC /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500EF9E213DDE58002DE3AC /* SampleData.swift */; };
 		F500EFA2213F6CEB002DE3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F500EFA1213F6CEB002DE3AC /* Assets.xcassets */; };
+		F52D18892155683200C0DDBD /* NsightTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52D18882155683200C0DDBD /* NsightTabBar.swift */; };
 		F546EF07212B9C4100441D80 /* nsightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546EF06212B9C4100441D80 /* nsightTableViewController.swift */; };
 		F5522C682129B8B900A00D09 /* ViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C622129B8B800A00D09 /* ViewController 2.swift */; };
 		F5522C6A2129B8B900A00D09 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5522C642129B8B800A00D09 /* PostManager.swift */; };
@@ -56,6 +57,7 @@
 		F500EF9D213DDE58002DE3AC /* MockMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		F500EF9E213DDE58002DE3AC /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		F500EFA1213F6CEB002DE3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F52D18882155683200C0DDBD /* NsightTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NsightTabBar.swift; sourceTree = "<group>"; };
 		F546EF06212B9C4100441D80 /* nsightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nsightTableViewController.swift; sourceTree = "<group>"; };
 		F5522C622129B8B800A00D09 /* ViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
 		F5522C642129B8B800A00D09 /* PostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				F546EF06212B9C4100441D80 /* nsightTableViewController.swift */,
 				F5716B3C21435A0500A93131 /* CellFooter.swift */,
 				F5716B402144964000A93131 /* NsightReaderController.swift */,
+				F52D18882155683200C0DDBD /* NsightTabBar.swift */,
 			);
 			path = nsight;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				TargetAttributes = {
 					F5B7FFB12120DB370063D070 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -321,6 +325,7 @@
 				F57ACE852135BCB500933C47 /* EmailCell.swift in Sources */,
 				F5B7FFBE2120DB370063D070 /* nsight.xcdatamodeld in Sources */,
 				F5522C6B2129B8B900A00D09 /* PostViewController.swift in Sources */,
+				F52D18892155683200C0DDBD /* NsightTabBar.swift in Sources */,
 				F5B7FFB82120DB370063D070 /* ViewController.swift in Sources */,
 				F5522C6C2129B8B900A00D09 /* DBScaffolding.swift in Sources */,
 				F500EF9F213DDE58002DE3AC /* MockMessage.swift in Sources */,
@@ -490,6 +495,7 @@
 			baseConfigurationReference = F4DB8524CF663C47909025C7 /* Pods-nsight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -501,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Enlighten.nsight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -511,6 +518,7 @@
 			baseConfigurationReference = 9E93E26D02223E136B084AA7 /* Pods-nsight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
