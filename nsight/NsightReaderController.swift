@@ -23,6 +23,8 @@ class NsightReaderController : UIViewController
         Reader.text = Content
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
+        
+        
     }
     
     @objc func back(){
