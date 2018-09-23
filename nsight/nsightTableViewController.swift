@@ -15,7 +15,7 @@ class nsightTableViewController: UITableViewController {
     
     var discussions = SampleDiscussions()
    
-    var selectedId: Int8 = 0
+    var selectedId: Int = 0
     
     override func viewDidLoad() {
         self.tableView.delegate = self
@@ -23,6 +23,8 @@ class nsightTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(logout))
     
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
         populate()
            //self.tableView.backgroundColor = UIColor.lightGray
         //tableView.dataSource = self;
@@ -30,15 +32,13 @@ class nsightTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
 
-        let nib = UINib(nibName: "TableSectionFooter", bundle: nil)
         
-        tableView.register(nib, forHeaderFooterViewReuseIdentifier: "TableSectionFooter")
         self.tableView?.register(EmailCell.self, forCellReuseIdentifier: "email")
         self.tableView?.register(TitleCell.self, forCellReuseIdentifier: "title")
         self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "comment")
         
         tableView?.dataSource = viewModel
-        
+       
     }
     
     @objc func logout()
@@ -47,23 +47,28 @@ class nsightTableViewController: UITableViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "Reader"){
-            
-
-
-
-
-let vc = segue.destination as! NsightReaderController
-            populate()
-            let i = viewModel.items[5] as! DiscussionViewModelEmailItem
-            
-            //vc.Content = (i.email)
-        }
+    @objc func back()
+    {
+        var ctrls = tabBarController?.viewControllers
+        
+        ctrls?.remove(at: 1)
+        
+        tabBarController?.viewControllers = ctrls
+        
+        tabBarController?.selectedIndex = 0
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        populate()
+    }
+    
     
     func populate()
     {
+        selectedId = UserDefaults.standard.integer(forKey: "id")
+        
         let i = discussions.discusions[Int(selectedId)]
         
         var imgs = [UIImage]()

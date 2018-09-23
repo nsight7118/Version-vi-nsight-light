@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var logo: UIImageView!
     @IBAction func SignInAction(_ sender: Any) {
-        performSegue(withIdentifier: "SignIn", sender: sender)
+        performSegue(withIdentifier: "SearchView", sender: sender)
     }
     
     

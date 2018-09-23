@@ -11,7 +11,7 @@ import UIKit
 
 class Discussion
 {
-    var id: Int8
+    var id: Int
     var title: String?
     var content: String?
     var profile_email: String?
@@ -21,7 +21,7 @@ class Discussion
     var audience: String?
     var clasification: String?
     
-    init(_Id:Int8, _title:String?, _content:String?, _email:String?, _about:String?, _audience:String?, _classification:String?)
+    init(_Id:Int, _title:String?, _content:String?, _email:String?, _about:String?, _audience:String?, _classification:String?)
     {
         id = _Id
         title = _title
