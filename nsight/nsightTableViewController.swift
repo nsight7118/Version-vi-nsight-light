@@ -24,6 +24,8 @@ class nsightTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(logout))
     
         
+        self.view.backgroundColor = UIColor(red:0.61, green: 0.80, blue: 0.40, alpha:1.0)
+        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
         populate()
            //self.tableView.backgroundColor = UIColor.lightGray
@@ -35,6 +37,7 @@ class nsightTableViewController: UITableViewController {
         
         self.tableView?.register(EmailCell.self, forCellReuseIdentifier: "email")
         self.tableView?.register(TitleCell.self, forCellReuseIdentifier: "title")
+        self.tableView?.register(TitleTextCell.self, forCellReuseIdentifier: "title_text")
         self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "comment")
         
         tableView?.dataSource = viewModel
@@ -84,17 +87,18 @@ class nsightTableViewController: UITableViewController {
         let item1 = DiscussionViewModelEmailItem(email:i.title!);
         let item2 =  DiscussionVIewModelTitleItem(image:imgs[Int(selectedId)])
         let item3 = DiscussionViewModelEmailItem(email: i.profile_email!)
-        let item4 = DiscussionViewModelEmailItem(email:i.title!)
+        let item4 = DiscussionViewModelTitleTextItem(email:i.title!)
         let item5 = DiscussionViewModelEmailItem(email:i.clasification!)
         let item6 = DiscussionViewModelCommentsItem(comments: [Comment]())
         let item7 = DiscussionViewModelAboutItem(_details:i.content!)
         viewModel.items.append(item2)
+        viewModel.items.append(item4)
         viewModel.items.append(item7)
         viewModel.items.append(item6)
         viewModel.items.append(item5)
         viewModel.items.append(item3)
         //viewModel.items.append(item1)
-        viewModel.items.append(item4)
+        //viewModel.items.append(item4)
         
     }
     
@@ -120,7 +124,8 @@ class nsightTableViewController: UITableViewController {
         switch indexPath.section
         {
         case 0: return 340
-        case 1: return 300
+        case 1: return 40
+        case 2: return 300
         default: return 40
         }
     }

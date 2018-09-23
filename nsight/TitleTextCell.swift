@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class EmailCell : UITableViewCell, ProtocolElelmentCell {
+class TitleTextCell : UITableViewCell, ProtocolElelmentCell {
     
     var email : String?
     

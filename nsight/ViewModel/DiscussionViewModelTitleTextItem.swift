@@ -8,10 +8,10 @@
 
 import Foundation
 
-class DiscussionViewModelEmailItem: DiscussionViewModelItem
+class DiscussionViewModelTitleTextItem: DiscussionViewModelItem
 {
     var type: DiscussionViewModelItemType {
-        return .profile_email
+        return .title_text
     }
     
     var sectionTitile: String {

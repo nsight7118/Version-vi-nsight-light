@@ -23,7 +23,7 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
         
         items = data.items
         
-        sectionRows = [DiscussionViewModelItemType.title.rawValue:1,DiscussionViewModelItemType.profile_email.rawValue:1,
+        sectionRows = [DiscussionViewModelItemType.title.rawValue:1,DiscussionViewModelItemType.title_text.rawValue:1,DiscussionViewModelItemType.profile_email.rawValue:1,
         DiscussionViewModelItemType.about.rawValue:1,
         DiscussionViewModelItemType.comments.rawValue:1,
         DiscussionViewModelItemType.discussionAttributes.rawValue:1];
@@ -82,6 +82,19 @@ class DiscussionViewModel: NSObject, UITableViewDataSource {
                     }
                     cell.contentView.backgroundColor = UIColor(red:0.68,green: 0.84, blue: 0.51, alpha:1.0)
                         return cell
+            }
+        case .title_text:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "title_text", for: indexPath) as? TitleTextCell {
+                if let Comments = item as? DiscussionViewModelTitleTextItem
+                {
+                    cell.email = Comments.email
+                }
+                else
+                {
+                    cell.email = "notyet"
+                }
+                cell.contentView.backgroundColor = UIColor(red:0.68,green: 0.84, blue: 0.51, alpha:1.0)
+                return cell
             }
         case .title:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as? TitleCell {

@@ -12,6 +12,7 @@ import UIKit
 enum DiscussionViewModelItemType: Int
 {
     case title = 0
+    case title_text
     case profile_email
     case about
     case comments

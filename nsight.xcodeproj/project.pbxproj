@@ -37,6 +37,8 @@
 		F57ACE9A2135BEB800933C47 /* DiscussionVIewModelTitleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE942135BEB800933C47 /* DiscussionVIewModelTitleItem.swift */; };
 		F57ACE9C2136BC1B00933C47 /* ProtocolElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE9B2136BC1B00933C47 /* ProtocolElementCell.swift */; };
 		F57ACE9E2137350700933C47 /* DiscussionViewModelItemTypeRowCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ACE9D2137350700933C47 /* DiscussionViewModelItemTypeRowCount.swift */; };
+		F5B097FE215802B400529548 /* TitleTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B097FD215802B300529548 /* TitleTextCell.swift */; };
+		F5B098002158054D00529548 /* DiscussionViewModelTitleTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B097FF2158054C00529548 /* DiscussionViewModelTitleTextItem.swift */; };
 		F5B7FFB62120DB370063D070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7FFB52120DB370063D070 /* AppDelegate.swift */; };
 		F5B7FFB82120DB370063D070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7FFB72120DB370063D070 /* ViewController.swift */; };
 		F5B7FFBB2120DB370063D070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B7FFB92120DB370063D070 /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		F57ACE942135BEB800933C47 /* DiscussionVIewModelTitleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionVIewModelTitleItem.swift; sourceTree = "<group>"; };
 		F57ACE9B2136BC1B00933C47 /* ProtocolElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolElementCell.swift; sourceTree = "<group>"; };
 		F57ACE9D2137350700933C47 /* DiscussionViewModelItemTypeRowCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionViewModelItemTypeRowCount.swift; sourceTree = "<group>"; };
+		F5B097FD215802B300529548 /* TitleTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextCell.swift; sourceTree = "<group>"; };
+		F5B097FF2158054C00529548 /* DiscussionViewModelTitleTextItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussionViewModelTitleTextItem.swift; sourceTree = "<group>"; };
 		F5B7FFB22120DB370063D070 /* nsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B7FFB52120DB370063D070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B7FFB72120DB370063D070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		F57ACE862135BDF500933C47 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F5B097FF2158054C00529548 /* DiscussionViewModelTitleTextItem.swift */,
 				F5716B4221449DC000A93131 /* DiscussionViewModelAboutItem.swift */,
 				F57ACE822135ABFE00933C47 /* DiscussionViewModel.swift */,
 				F57ACE922135BEB800933C47 /* DiscussionViewModelAttributesItem.swift */,
@@ -160,6 +165,7 @@
 		F5B7FFB42120DB370063D070 /* nsight */ = {
 			isa = PBXGroup;
 			children = (
+				F5B097FD215802B300529548 /* TitleTextCell.swift */,
 				F5716B3E21440D3000A93131 /* nsightViewController.swift */,
 				F5716B3A2143582700A93131 /* TableSectionFooter.xib */,
 				F500EFA1213F6CEB002DE3AC /* Assets.xcassets */,
@@ -321,6 +327,7 @@
 				F57ACE852135BCB500933C47 /* EmailCell.swift in Sources */,
 				F5B7FFBE2120DB370063D070 /* nsight.xcdatamodeld in Sources */,
 				F5522C6B2129B8B900A00D09 /* PostViewController.swift in Sources */,
+				F5B097FE215802B400529548 /* TitleTextCell.swift in Sources */,
 				F52D18892155683200C0DDBD /* NsightTabBar.swift in Sources */,
 				F5B7FFB82120DB370063D070 /* ViewController.swift in Sources */,
 				F5522C6C2129B8B900A00D09 /* DBScaffolding.swift in Sources */,
@@ -344,6 +351,7 @@
 				F546EF07212B9C4100441D80 /* nsightTableViewController.swift in Sources */,
 				F57ACE982135BEB800933C47 /* DiscussionViewModelAttributesItem.swift in Sources */,
 				F5716B3921400B4D00A93131 /* SampleDiscussions.swift in Sources */,
+				F5B098002158054D00529548 /* DiscussionViewModelTitleTextItem.swift in Sources */,
 				F5522C6A2129B8B900A00D09 /* PostManager.swift in Sources */,
 				F5CA74A9212BA2D500451FFC /* Discussion.swift in Sources */,
 				F57ACE9E2137350700933C47 /* DiscussionViewModelItemTypeRowCount.swift in Sources */,
